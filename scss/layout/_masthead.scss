@@ -8,11 +8,16 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  height: 785px;
   .intro-text {
     position: absolute;
-    z-index: 3;
-    padding-top: 150px;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    padding-top: 250px;
     padding-bottom: 100px;
+    width: 100%;
+    text-align: center;
     .intro-lead-in {
       margin-bottom: 25px;
       font-size: 22px;
@@ -67,7 +72,7 @@ header.masthead {
 }
 
 #video-background.vid-bg {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   z-index: 0;
@@ -78,7 +83,7 @@ header.masthead {
 }
 
 .vid-overlay {
-  position: fixed;
+  position: relative;
   right: 0;
   bottom: 0;
   z-index: 1;

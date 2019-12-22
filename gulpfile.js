@@ -43,8 +43,8 @@ function browserSyncReload(done) {
 }
 
 // Clean vendor
-function clean() {
-  return del(["./vendor/"]);
+function clean(done) {
+  return del(["./vendor/"]), done();
 }
 
 // Bring third party dependencies from node_modules into vendor directory
@@ -71,7 +71,7 @@ function modules() {
 }
 
 // CSS task
-function css() {
+function css(done) {
   setTimeout(function(){
   return gulp
     .src("./scss/**/*.scss")
@@ -94,11 +94,11 @@ function css() {
     .pipe(cleanCSS())
     .pipe(gulp.dest("./css"))
     .pipe(browsersync.stream());
-  }, 3000);
+  }, 3000), done()
 }
 
 // JS task
-function js() {
+function js(done) {
   return gulp
     .src([
       './js/*.js',
@@ -114,7 +114,7 @@ function js() {
       suffix: '.min'
     }))
     .pipe(gulp.dest('./js'))
-    .pipe(browsersync.stream());
+    .pipe(browsersync.stream()), done()
 }
 
 // Watch files
@@ -127,7 +127,7 @@ function watchFiles() {
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
 // const build = gulp.series(vendor, gulp.parallel(css, js));
-const build = gulp.series(gulp.parallel(css, js));
+const build = gulp.parallel(css, js);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
