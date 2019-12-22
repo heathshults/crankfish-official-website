@@ -18,8 +18,8 @@ const pkg = require('./package.json');
 
 // Set the banner content
 const banner = ['/*!\n',
-  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
+  ' * crankfish - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
+  ' * Copyright 2019-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
   ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
   ' */\n',
   '\n'
@@ -72,12 +72,13 @@ function modules() {
 
 // CSS task
 function css() {
+  setTimeout(function(){
   return gulp
     .src("./scss/**/*.scss")
     .pipe(plumber())
     .pipe(sass({
-      outputStyle: "expanded",
-      includePaths: "./node_modules",
+      outputStyle: "expanded"//,
+      //includePaths: "./node_modules",
     }))
     .on("error", sass.logError)
     .pipe(autoprefixer({
@@ -93,6 +94,7 @@ function css() {
     .pipe(cleanCSS())
     .pipe(gulp.dest("./css"))
     .pipe(browsersync.stream());
+  }, 3000);
 }
 
 // JS task
@@ -124,7 +126,8 @@ function watchFiles() {
 
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js));
+// const build = gulp.series(vendor, gulp.parallel(css, js));
+const build = gulp.series(gulp.parallel(css, js));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
