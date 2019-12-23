@@ -3784,6 +3784,249 @@ td.hljs-ln-numbers {
   }
 }
 
+.player-container {
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  width: 100%;
+  height: 112px;
+  background: #151518;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+div.player {
+  position: relative;
+  display: inline-flex;
+  width: 66%;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: #151515;
+  color: #e9ecef;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+div.player::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+div.player .album-art-container {
+  padding: .4rem;
+  display: inline-flex;
+  min-width: 24%;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+div.player img.album-art {
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+div.meta-container {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: .4rem;
+  padding-right: 0px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+div.meta-container div.song-title {
+  font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+div.meta-container div.song-artist {
+  margin-top: 10px;
+  font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+}
+
+div.meta-container div.time-container {
+  display: inline-flex;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 12px;
+  color: #fff;
+  text-align: right;
+  height: 16px;
+}
+
+div.meta-container div.time-container::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+div.meta-container div.time-container div.current-time {
+  float: left;
+}
+
+div.meta-container div.time-container div.duration {
+  float: right;
+}
+
+div.control-container {
+  display: inline-flex;
+  text-align: center;
+  padding-right: 1rem;
+  align-items: center;
+}
+
+div.control-container div.amplitude-prev {
+  display: inline-flex;
+  width: 28px;
+  height: 24px;
+  vertical-align: middle;
+  cursor: pointer;
+  background: url("/img/icons/skip-previous.svg");
+  background-repeat: no-repeat;
+}
+
+div.control-container div.play-pause-contianer {
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: .4rem;
+  vertical-align: middle;
+  background: #3d3d3d;
+  background: radial-gradient(circle, #3d3d3d 0%, black 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d3d3d",endColorstr="#000000",GradientType=1);
+}
+
+div.control-container div.play-pause-contianer:hover {
+  background: rgba(254, 200, 16, 0.29);
+  background: radial-gradient(circle, rgba(254, 200, 16, 0.75) 0%, rgba(254, 200, 16, 0.29) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d3d3d",endColorstr="#000000",GradientType=1);
+}
+
+div.control-container div.amplitude-play-pause {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+div.control-container div.amplitude-play-pause.amplitude-paused {
+  background: url("/img/icons/play-arrow.svg");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center middle;
+  margin-left: 3px;
+}
+
+div.control-container div.amplitude-play-pause.amplitude-playing {
+  background: url("/img/icons/pause.svg");
+  background-repeat: no-repeat;
+}
+
+div.control-container div.amplitude-next {
+  display: inline-flex;
+  width: 28px;
+  height: 24px;
+  vertical-align: middle;
+  cursor: pointer;
+  background: url("/img/icons/skip-next.svg");
+}
+
+/*
+  Small only
+*/
+@media screen and (max-width: 39.9375em) {
+  div.control-container div.amplitude-prev {
+    margin-right: 10px;
+  }
+  div.control-container div.amplitude-next {
+    margin-left: 10px;
+  }
+}
+
+/*
+  Medium only
+*/
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  div.control-container div.amplitude-prev {
+    margin-right: 10px;
+  }
+  div.control-container div.amplitude-next {
+    margin-left: 10px;
+  }
+}
+
+/*
+  Large Only
+*/
+@media screen and (min-width: 64em) {
+  div.control-container div.amplitude-prev {
+    margin-right: 10px;
+  }
+  div.control-container div.amplitude-next {
+    margin-left: 10px;
+  }
+}
+
+progress.amplitude-song-played-progress:not([value]) {
+  background-color: #fed136;
+}
+
+progress.amplitude-song-played-progress {
+  display: block;
+  width: 100%;
+  height: 5px;
+  height: 8px;
+  cursor: pointer;
+  background-color: #000;
+  border: none;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #3a3a3a;
+  border-radius: 3px;
+}
+
+progress[value]::-moz-progress-bar {
+  background-color: #00a0ff;
+  border-radius: 3px;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #00a0ff;
+  border-radius: 3px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+body div#preload {
+  display: none;
+}
+
 header.masthead {
   position: relative;
   color: #fff;

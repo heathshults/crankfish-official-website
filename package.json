@@ -4,6 +4,7 @@
   "description": "The official digital residence of the legendary Dallas, TX rock/metal band - crankfish!",
   "main": "gulpfile.js",
   "dependencies": {
+    "amplitudejs": "^5.0.3",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "jquery.easing": "^1.4.1"

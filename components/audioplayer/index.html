@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crankfish Music</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.1/dist/css/foundation.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.1/dist/js/foundation.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/amplitudejs@latest/dist/amplitude.min.js"></script>
+    
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Droid+Serif:400,700,400italic,700italic&display=swap' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bahianita|New+Rocker|OswaldRoboto:300,400,700&display=swap" rel="stylesheet">
+  
+    <!-- Custom styles for this template -->
+    <link href="/css/crankfish.min.css" rel="stylesheet">
+  
+
+    <!-- Include font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="player-container container">
+    <div class="player ">
+      <div class="album-art-container">
+        <img src="/img/cf-cd-cover-2002.jpg" class="album-art"/>
+        <div class="song-title">Represent #1</divv>
+        <div class="song-artist">Crankfish</div>
+       </div>
+    </div>
+    
+    
+    
+      <div class="meta-container">
+        <div class="control-container">
+          <div class="amplitude-prev">
+
+          </div>
+          <div class="play-pause-contianer">
+            <div class="amplitude-play-pause" data-amplitude-song-index="0">
+          </div>
+          </div>
+          <div class="amplitude-next">
+
+          </div>
+        </div>
+        <div class="time-container">
+          <span class="current-time">
+            <span class="amplitude-current-minutes" data-amplitude-song-index="0"></span>:<span class="amplitude-current-seconds" data-amplitude-song-index="0"></span>
+          </span>
+          <span style="margin: 0 4px 0 4px;"> / </span>
+          <span class="duration">
+            <span class="amplitude-duration-minutes" data-amplitude-song-index="0">3</span>:<span class="amplitude-duration-seconds" data-amplitude-song-index="0">30</span>
+          </span>
+        </div>
+        
+        <progress class="amplitude-song-played-progress" data-amplitude-song-index="0" id="song-played-progress-1"></progress>
+        
+        
+      </div>
+    </div>
+    
+    <div id="preload">
+      <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/previous.svg"/>
+      <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/play.svg"/>
+      <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/pause.svg"/>
+      <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/next.svg"/>
+    </div>
+  </div>
+    
+    <script id="rendered-js">
+      Amplitude.init({
+        "songs": [
+          {
+            "name": "Represent",
+            "artist": "Crankfish",
+            "album": "Red Swallow",
+            "url": "/music/eMastered_Represent.mp3",
+            "cover_art_url": "img/cf-cd-cover-2002.jpg" 
+          },
+          {
+            "name": "Walk with Roland",
+            "artist": "Crankfish",
+            "album": "Red Swallow",
+            "url": "/music/eMastered_Roland.mp3",
+            "cover_art_url": "img/cf-cd-cover-2002.jpg" 
+          },
+          {
+            "name": "King Pin",
+            "artist": "Crankfish",
+            "album": "Red Swallow",
+            "url": "/music/King_Pin.mp3",
+            "cover_art_url": "img/cf-cd-cover-2002.jpg" 
+          },
+          {
+            "name": "Syllable",
+            "artist": "Crankfish",
+            "album": "Red Swallow",
+            "url": "/music/eMastered_Syllable.mp3",
+            "cover_art_url": "img/cf-cd-cover-2002.jpg" 
+          },
+          {
+            "name": "Red Swallow",
+            "artist": "Crankfish",
+            "album": "Red Swallow",
+            "url": "/music/eMastered_Red_swallow.mp3",
+            "cover_art_url": "img/cf-cd-cover-2002.jpg" 
+          }
+        
+        ] });
+      
+      
+      
+      
+      document.getElementById('song-played-progress-1').addEventListener('click', function (e) {
+        if (Amplitude.getActiveIndex() == 0) {
+          var offset = this.getBoundingClientRect();
+          var x = e.pageX - offset.left;
+      
+          Amplitude.setSongPlayedPercentage(parseFloat(x) / parseFloat(this.offsetWidth) * 100);
+        }
+      });
+      
+      document.getElementById('song-played-progress-2').addEventListener('click', function (e) {
+        if (Amplitude.getActiveIndex() == 1) {
+          var offset = this.getBoundingClientRect();
+          var x = e.pageX - offset.left;
+      
+          Amplitude.setSongPlayedPercentage(parseFloat(x) / parseFloat(this.offsetWidth) * 100);
+        }
+      });
+      
+          </script>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Droid+Serif:400,700,400italic,700italic&display=swap' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Bahianita|New+Rocker|OswaldRoboto:300,400,700&display=swap" rel="stylesheet">
+
+  <link href="css/crankfish.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+  
+<div class="player horizontal">
+  <div class="container">
+    <div class="info-album-player">
+      <div class="album-cover" id="bg-image3"></div>
+      <p class="album-title">Spectrum</p>
+      <p class="artist-name">Album by Blummsday</p>
+    </div>
+    <div class="player-content">
+      <audio preload></audio>
+      <ol class="playlist">
+        <li><a href="#" data-src="/music/eMastered_Represent.mp3">Represent</a></li>
+        <li><a href="#" data-src="/music/eMastered_Roland.mp3">Walk with Roland</a></li>
+        <li><a href="#" data-src="/music/King_Pin.mp3">King Pin</a></li>
+        <li><a href="#" data-src="/music/eMastered_Syllable.mp3">Syllable</a></li>
+        <li><a href="#" data-src="/music/eMastered_Red_swallow.mp3">Red Swallow</a></li>
+      </ol>
+      <div class="nextprev">
+        <span class="prev">prev</span>
+        <span class="next">next</span>
+      </div>
+      <span class="btnloop">loop</span>
+    </div>
+  </div>
+</div>
+ <script src="vendor/jquery/jquery.min.js"></script>
+ <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+ <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+ <script src="js/jqBootstrapValidation.js"></script>
+ <script src="js/contact_me.js"></script>
+
+ <script src="js/agency.min.js"></script>
+ <script>
+  Amplitude.init({
+		"songs": [
+			{
+				"name": "Song Name 1",
+				"artist": "Artist Name",
+				"album": "Album Name",
+				"url": "/song/url.mp3",
+				"cover_art_url": "/cover/art/url.jpg"
+			},
+			{
+				"name": "Song Name 2",
+				"artist": "Artist Name",
+				"album": "Album Name",
+				"url": "/song/url.mp3",
+				"cover_art_url": "/cover/art/url.jpg"
+			},
+			{
+				"name": "Song Name 3",
+				"artist": "Artist Name",
+				"album": "Album Name",
+				"url": "/song/url.mp3",
+				"cover_art_url": "/cover/art/url.jpg"
+			}
+		]
+	});
+ </script>
+
+</body>
+
+</html> -->
