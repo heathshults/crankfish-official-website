@@ -20,11 +20,16 @@
 
   </head>
   <body>
-    <div class="player-container container">
+    <!-- <script>
+      $(document).ready((){
+         $(BODY).load('/components/audioplayer/player.html')
+      });
+     </script> -->
+    <div class="player-container container-fluid">
     <div class="player ">
       <div class="album-art-container">
         <img src="/img/cf-cd-cover-2002.jpg" class="album-art"/>
-        <div class="song-title">Represent #1</divv>
+        <div class="song-title">Represent <sup class="number">#1</sup></divv>
         <div class="song-artist">Crankfish</div>
        </div>
     </div>
@@ -36,7 +41,7 @@
           <div class="amplitude-prev">
 
           </div>
-          <div class="play-pause-contianer">
+          <div class="play-pause-contianer hvr-rectangle-out">
             <div class="amplitude-play-pause" data-amplitude-song-index="0">
           </div>
           </div>
@@ -61,10 +66,11 @@
     </div>
     
     <div id="preload">
-      <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/previous.svg"/>
-      <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/play.svg"/>
-      <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/pause.svg"/>
-      <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/multiple-songs/next.svg"/>
+     <div id="preload">
+      <img src="/img/icons/skip-previous.svg"/>
+      <img src="/img/icons/play-arrow.svg"/>
+      <img src="/img/icons/pause.svg"/>
+      <img src="/img/icons/skip-next.svg"/>
     </div>
   </div>
     

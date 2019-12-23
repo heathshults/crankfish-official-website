@@ -3,30 +3,35 @@
 
 
 .player-container {
-  display: flex;
   position: absolute;
   //top: 100%;
-  bottom: 0px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  bottom: 0;
+  box-sizing: border-box;
   display: flex;
+  align-items: center;
   width: 100%;
   height: 112px;
   background: #151518;
-  box-sizing: border-box;
-  align-items: center;
   // overflow: hidden;
 }
 div {
   &.player {
     position: relative;
+    box-sizing: border-box;
     display: inline-flex;
+    align-items: center;
     width: 66%;
+    padding-left: .8rem;
     margin: auto;
     margin-top: 0;
     margin-bottom: 0;
-    background: #151515;
     color: $gray-200;
-    align-items: center;
-    box-sizing: border-box;
+    background: #151515;
+    border-right: 1px solid #252525;
+    border-left: 1px solid #252525;
 
     &::after {
       display: table;
@@ -34,11 +39,35 @@ div {
       content: "";
     }
     .album-art-container {
-      padding: .4rem;
-      display: inline-flex;
-      min-width: 24%;
       box-sizing: border-box;
+      display: inline-flex;
       align-items: center;
+      min-width: 24%;
+      padding: .4rem;
+      border-right: 1px solid #252525;
+      div {
+        &.song-title {
+          @include body-font;
+          font-size: 1rem;
+          font-weight: 400;
+          color: #fff;
+          text-align: left;
+          text-transform: uppercase !important;
+          .number {
+            margin-left: 2px;
+            font-size: 12px;
+            color: #fed336b0;
+          }
+        }
+
+        &.song-artist {
+
+          @include body-font;
+          font-size: 12px;
+          color: #fff;
+          text-align: left;
+        }
+      }
     }
 
     img {
@@ -47,48 +76,51 @@ div {
         width: 100px;
         height: 100px;
         margin-right: 10px;
+
       }
     }
   }
 
   &.meta-container {
-    display: flex;
-    flex-grow: 1;
-    flex-shrink: 1;
-    padding: .4rem;
-    padding-right: 0px;
     //width: 70%;
     box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
     align-items: center;
+    padding: .4rem;
+    padding-right: 1.7rem;
+    padding-left: 1.7rem;
+    flex-shrink: 1;
     div {
       &.song-title {
         @include body-font;
         font-size: 22px;
         font-weight: 400;
         color: #fff;
-        text-align: center;
-        text-transform: uppercase;
+        text-align: left;
+        text-transform: uppercase !important;
       }
 
       &.song-artist {
         margin-top: 10px;
-        @include body-font;
         font-size: 12px;
         color: #fff;
-        text-align: center;
+        text-align: left;
+        @include body-font;
       }
 
       &.time-container {
-        display: inline-flex;
         position: absolute;
         top: 30px;
         right: 0px;
+        display: inline-flex;
+        height: 16px;
+        padding-right: 1.7rem;
         margin-bottom: 10px;
-        @include body-font;
         font-size: 12px;
         color: #fff;
         text-align: right;
-        height:16px;
+        @include body-font;
 
         &::after {
           display: table;
@@ -111,10 +143,10 @@ div {
 
   &.control-container {
     display: inline-flex;
-    text-align: center;
-    padding-right: 1rem;
     align-items: center;
-    
+    padding-right: 1rem;
+    text-align: center;
+
     div {
       &.amplitude-prev {
         display: inline-flex;
@@ -127,43 +159,43 @@ div {
       }
       &.play-pause-contianer {
         display: inline-block;
-        // border: 2px solid #111111; 
-        border-radius: 50%;
-        cursor: pointer;
         width: 40px;
         height: 40px;
         padding: .4rem;
         vertical-align: middle;
-        background: rgb(61,61,61);
-        background: -moz-radial-gradient(circle, rgba(61,61,61,1) 0%, rgba(0,0,0,1) 100%);
-        background: -webkit-radial-gradient(circle, rgba(61,61,61,1) 0%, rgba(0,0,0,1) 100%);
-        background: radial-gradient(circle, rgba(61,61,61,1) 0%, rgba(0,0,0,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d3d3d",endColorstr="#000000",GradientType=1);
+        cursor: pointer;
+        background: rgb(61, 61, 61);
+        background: -moz-radial-gradient(circle, rgba(61, 61, 61, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        background: -webkit-radial-gradient(circle, rgba(61, 61, 61, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        background: radial-gradient(circle, rgba(61, 61, 61, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr="#3d3d3d", endColorstr="#000000", GradientType=1);
+        border-radius: 50%;
+        transition: all 1s ease-in-out;
         &:hover {
-        background: rgba(254, 200, 16, .29);
-        background: -moz-radial-gradient(circle, rgba(254, 200, 16, .75) 0%, rgba(254, 200, 16, .29) 100%);
-        background: -webkit-radial-gradient(circle, rgba(254, 200, 16, .75) 0%, rgba(254, 200, 16, .29) 100%);
-        background: radial-gradient(circle, rgba(254, 200, 16, .75) 0%, rgba(254, 200, 16, .29) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d3d3d",endColorstr="#000000",GradientType=1);
+          background: rgba(254, 200, 16, .29);
+          background: -moz-radial-gradient(circle, rgba(254, 200, 16, .75) 0%, rgba(254, 200, 16, .29) 100%);
+          background: -webkit-radial-gradient(circle, rgba(254, 200, 16, .75) 0%, rgba(254, 200, 16, .29) 100%);
+          background: radial-gradient(circle, rgba(254, 200, 16, .75) 0%, rgba(254, 200, 16, .29) 100%);
+          filter: progid:dximagetransform.microsoft.gradient(startColorstr="#3d3d3d", endColorstr="#000000", GradientType=1);
+          transition: all 1s ease-in-out;
+        }
+        &:active, &:focus, &:focus-within {
+          
         }
       }
       &.amplitude-play-pause {
         display: inline-block;
         width: 40px;
         height: 40px;
-        
-        
         vertical-align: middle;
         cursor: pointer;
-        
-        
 
         &.amplitude-paused {
+          margin-left: 3px;
           background: url("/img/icons/play-arrow.svg");
-          background-size: 40px;
           background-repeat: no-repeat;
           background-position: center middle;
-          margin-left: 3px;
+          background-size: 40px;
         }
 
         &.amplitude-playing {
