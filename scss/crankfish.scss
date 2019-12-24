@@ -1,23 +1,25 @@
 // Core variables and mixins
-@import "base/variables.scss";
-@import "base/mixins.scss";
+@import "base/variables";
+@import "base/mixins";
 
 // Global CSS
-@import "base/page.scss";
+@import "base/page";
 
 // Components
-@import "components/buttons.scss";
-@import "components/navbar.scss";
-@import "components/player.scss";
+@import "components/buttons";
+@import "components/navbar";
+@import "components/player";
+@import "components/loader-01";
+@import "components/loader-pace";
 
 // Layout
-@import "layout/masthead.scss";
-@import "layout/services.scss";
-@import "layout/portfolio.scss";
-@import "layout/timeline.scss";
-@import "layout/team.scss";
-@import "layout/contact.scss";
-@import "layout/footer.scss";
+@import "layout/masthead";
+@import "layout/services";
+@import "layout/portfolio";
+@import "layout/timeline";
+@import "layout/team";
+@import "layout/contact";
+@import "layout/footer";
 
 // hover starts in the middle of the object 
 @import "effects/effects";

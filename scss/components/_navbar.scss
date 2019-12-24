@@ -35,6 +35,9 @@
           color: $primary;
         }
         &::after {
+          position: absolute;
+          bottom: 0px;
+          right: -4px;
           content: '';
           width: 2px;
           height: 2px;
