@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function(){
 Amplitude.init({
   "songs": [{
       "name": "Represent",
@@ -53,26 +54,42 @@ Amplitude.init({
     </div>
     
     <div class="meta-container">
-      <div class="control-container">
-        <div class="amplitude-prev">
-
+        <div class="control-container">
+          <div class="amplitude-prev">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <title>skip-previous</title>
+              <path fill="#ffffff" d="M9.516 12l8.484-6v12zM6 6h2.016v12h-2.016v-12z"></path>
+            </svg>
+          </div>
+          <div class="play-pause-contianer hvr-rectangle-out">
+            <div class="amplitude-play-pause" data-amplitude-song-index="0">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="play-icon" width="32" height="32" viewBox="0 0 24 24">
+            <title>play-arrow</title>
+                <path fill="#ffffff" d="M6.516 5.016l10.969 6.984-10.969 6.984v-13.969z"></path>
+              </svg>
+  
+          </div>
+          </div>
+          <div class="amplitude-next">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <title>skip-next</title>
+              <path fill="#ffffff" d="M15.984 6h2.016v12h-2.016v-12zM6 18v-12l8.484 6z"></path>
+            </svg>
+          </div>
         </div>
-        <div class="play-pause-contianer hvr-rectangle-out">
-          <div class="amplitude-play-pause" data-amplitude-song-index="0">
+        <div class="time-container">
+          <span class="current-time">
+            <span class="amplitude-current-minutes" data-amplitude-song-index="0"></span>:<span class="amplitude-current-seconds" data-amplitude-song-index="0"></span>
+          </span>
+          <span style="margin: 0 4px 0 4px;"> / </span>
+          <span class="duration">
+            <span class="amplitude-duration-minutes" data-amplitude-song-index="0">3</span>:<span class="amplitude-duration-seconds" data-amplitude-song-index="0">30</span>
+          </span>
         </div>
-        </div>
-        <div class="amplitude-next">
-
-        </div>
-      </div>
-      <div class="time-container">
-        <span class="current-time">
-          <span class="amplitude-current-minutes" data-amplitude-song-index="0"></span>:<span class="amplitude-current-seconds" data-amplitude-song-index="0"></span>
-        </span>
-        <span style="margin: 0 4px 0 4px;"> / </span>
-        <span class="duration">
-          <span class="amplitude-duration-minutes" data-amplitude-song-index="0">3</span>:<span class="amplitude-duration-seconds" data-amplitude-song-index="0">30</span>
-        </span>
+        
+        <progress class="amplitude-song-played-progress" data-amplitude-song-index="0" id="song-played-progress-1"></progress>
+        
+        
       </div>
       
       <progress class="amplitude-song-played-progress" data-amplitude-song-index="0" id="song-played-progress-1"></progress>
@@ -89,9 +106,12 @@ Amplitude.init({
     <img src="/img/icons/skip-next.svg"/>
   </div>
 </div>`
-  
- $('BODY').append(thePlayer)
 
+$('BODY').append(thePlayer)
+})
+
+window.load = function() {
+  alert('window.load')
  document.getElementById('song-played-progress-1')
  .addEventListener('click', function (e) {
    if (Amplitude.getActiveIndex() == 0) {
@@ -109,3 +129,4 @@ document.getElementById('song-played-progress-2')
      Amplitude.setSongPlayedPercentage(parseFloat(x) / parseFloat(this.offsetWidth) * 100);
    }
  });
+}

@@ -3,11 +3,11 @@
 
 
 .player-container {
-  position: absolute;
+  position: fixed;
   //top: 100%;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 99;
   bottom: 0;
   box-sizing: border-box;
   display: flex;
@@ -73,8 +73,8 @@ div {
     img {
       &.album-art {
         display: inline-flex;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         margin-right: 10px;
 
       }
@@ -111,7 +111,7 @@ div {
 
       &.time-container {
         position: absolute;
-        top: 30px;
+        top: 20px;
         right: 0px;
         display: inline-flex;
         height: 16px;
@@ -154,20 +154,20 @@ div {
         height: 24px;
         vertical-align: middle;
         cursor: pointer;
-        background: url("/img/icons/skip-previous.svg");
-        background-repeat: no-repeat;
+        // background: url("/img/icons/skip-previous.svg");
+        // background-repeat: no-repeat;
       }
       &.play-pause-contianer {
-        display: inline-block;
+        display: inline-flex;
         width: 40px;
         height: 40px;
         padding: .4rem;
         vertical-align: middle;
         cursor: pointer;
         background: rgb(61, 61, 61);
-        background: -moz-radial-gradient(circle, rgba(61, 61, 61, 1) 0%, rgba(0, 0, 0, 1) 100%);
-        background: -webkit-radial-gradient(circle, rgba(61, 61, 61, 1) 0%, rgba(0, 0, 0, 1) 100%);
-        background: radial-gradient(circle, rgba(61, 61, 61, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        background: -moz-radial-gradient(circle, rgba(61, 61, 61, 1) 20%, rgba(0, 0, 0, 1) 100%);
+        background: -webkit-radial-gradient(circle, rgba(61, 61, 61, 1) 20%, rgba(0, 0, 0, 1) 100%);
+        background: radial-gradient(circle, rgba(61, 61, 61, 1) 20%, rgba(0, 0, 0, 1) 100%);
         filter: progid:dximagetransform.microsoft.gradient(startColorstr="#3d3d3d", endColorstr="#000000", GradientType=1);
         border-radius: 50%;
         transition: all 1s ease-in-out;
@@ -182,25 +182,37 @@ div {
         &:active, &:focus, &:focus-within {
           
         }
+        .play-icon-offset {
+          margin-left: -2px;
+          margin-top: -2px;
+        }
       }
       &.amplitude-play-pause {
         display: inline-block;
+        flex: 1 1 auto;
+        align-items: center;
+        justify-items: center;
         width: 40px;
-        height: 40px;
+        height:450px;
+        margin: 0 auto;
         vertical-align: middle;
+        text-align: center;
+        /*background: url("/img/icons/play-arrow.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%*/
         cursor: pointer;
 
         &.amplitude-paused {
           margin-left: 3px;
-          background: url("/img/icons/play-arrow.svg");
+          /*background: url("/img/icons/play-arrow.svg");
           background-repeat: no-repeat;
           background-position: center middle;
-          background-size: 40px;
+          background-size: 40px;*/
         }
 
         &.amplitude-playing {
-          background: url("/img/icons/pause.svg");
-          background-repeat: no-repeat;
+          // background: url("/img/icons/pause.svg");
+          // background-repeat: no-repeat;
         }
       }
 
@@ -213,7 +225,7 @@ div {
         // margin-left: 75px;
         vertical-align: middle;
         cursor: pointer;
-        background: url("/img/icons/skip-next.svg");
+        // background: url("/img/icons/skip-next.svg");
       }
     }
   }

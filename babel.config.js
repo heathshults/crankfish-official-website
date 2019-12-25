@@ -13,6 +13,7 @@ module.exports = function(api) {
         '@babel/react'
       ]
       const plugins = [
+        'transform-class-properties',
         'dynamic-import-node-babel-7',
         '@babel/plugin-transform-modules-commonjs',
         '@babel/plugin-proposal-export-namespace-from'

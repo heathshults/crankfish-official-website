@@ -12,6 +12,7 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
+const php = require("gulp-connect-php");
 
 // Load package.json for banner
 const pkg = require('./package.json');
@@ -25,13 +26,19 @@ const banner = ['/*!\n',
   '\n'
 ].join('');
 
+function servephp(){
+  php.server({base:'./', port:8010, keepalive:true});
+}
+
+
 // BrowserSync
 function browserSync(done) {
+  servephp();
   browsersync.init({
-    server: {
-      baseDir: "./"
-    },
-    port: 3000
+    proxy:"localhost:8010",
+        baseDir: "./",
+        open:true,
+        notify:false
   });
   done();
 }
@@ -97,6 +104,14 @@ function css(done) {
   }, 3000), done()
 }
 
+var fs = require("fs");
+var browserify = require("browserify");
+function babelit(done) {
+browserify("build-js/scripts.js")
+  .transform("babelify", {presets: ["@babel/preset-env", "@babel/preset-react"]})
+  .bundle()
+  .pipe(fs.createWriteStream("./js/crankfish.js")), done();
+}
 // JS task
 function js(done) {
   return gulp
@@ -138,3 +153,5 @@ exports.vendor = vendor;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;
+exports.servephp = servephp
+exports.babelit = babelit
