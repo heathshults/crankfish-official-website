@@ -25,3 +25,11 @@
   color: rgba(255,255,255, .35);
   text-transform: uppercase;
 }
+@mixin hs-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin hs-grid__cell {
+  flex-basis: 0;
+  flex-grow: 1;
+}

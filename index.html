@@ -130,7 +130,7 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-lead-in">Dallas, Tx</div>
-        <div class="intro-heading text-uppercase">HEAVY NASTY METAL</div>
+        <div class="intro-heading text-uppercase">HEAVY META NASTY</div>
         <a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="#services">COME INSIDE</a>
       </div>
     </div>
@@ -777,32 +777,22 @@
   <script src="/js/src/jqBootstrapValidation.js"></script>
   <script src="/components/audioplayer/player.js"></script>
   <script src="js/src/agency.min.js"></script>
+  <script src="/components/audioplayer/js/functions.js"></script> 
   <script>
     const vidPlayer = document.querySelector('#vidPlayer');
     const eventLog = document.querySelector('.event-log-contents');
     let vidSource = null;
-
-    // function handleEvent(event) {
-      
-        // eventLog.textContent = eventLog.textContent + `${event.type}\n`;
-    // }
-
-    // vidPlayer.addEventListener('loadstart', handleEvent);
-    // vidPlayer.addEventListener('progress', handleEvent);
-    // vidPlayer.addEventListener('canplay', handleEvent);
-    // vidPlayer.addEventListener('canplaythrough', handleEvent);
-
+    
     if (vidSource) {
-        document.location.reload();
+      document.location.reload();
     } else {            
       vidSource = document.createElement('source');
       vidSource.setAttribute('src', '/vid/hp-bg.mp4');
       vidSource.setAttribute('type', 'video/mp4');
 
       vidPlayer.appendChild(vidSource);
-    }
+  }
   </script>
- 
 </body>
 
 </html>
