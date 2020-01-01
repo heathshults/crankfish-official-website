@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'HighVoltage Rough';
+    src: url('/fonts/HighVoltageRough.woff2') format('woff2'),
+        url('/fonts/HighVoltageRough.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'White On';
+    src: url('/fonts/WhiteOnBlack.woff2') format('woff2'),
+        url('/fonts/WhiteOnBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dreamwalker';
+    src: url('/fonts/Dreamwalker.woff2') format('woff2'),
+        url('/fonts/Dreamwalker.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

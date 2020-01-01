@@ -1,798 +1,1010 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+     <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-<head>
+   <!-- <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Droid+Serif:400,700,400italic,700italic&display=swap' rel='stylesheet' type='text/css'> -->
+   <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Bahianita|New+Rocker|OswaldRoboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&display=swap" rel="stylesheet" ' type='text/css'> 
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <link rel="stylesheet" href="styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="styles/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/vendor/superslides.css">
+    <link rel="stylesheet" href="styles/vendor/owl.carousel.css">
+    <link rel="stylesheet" href="styles/vendor/owl.transitions.css">
+    <link rel="stylesheet" href="styles/vendor/flickity.min.css">
+    <link rel="stylesheet" href="styles/vendor/swipebox.min.css">
+    <link rel="stylesheet" href="styles/vendor/TimeCircles.css">
 
-  <title>Crankfish Official Website</title>
-  
-  <script src="js/src/pace.min.js"></script>
-  <script>
-    paceOptions = {
-      elements: {
-        selectors: [
-        '#vidPlayer,.vidplayer'// , 
-        //'.user-profile,.profile-error'
-        ]
-      }
-    }
-  </script>
-  
-  
-  <script src="https://cdn.jsdelivr.net/npm/amplitudejs@latest/dist/amplitude.min.js"></script>
-  <!-- Bootstrap core CSS -->
-  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main-hardrock.css">
+    <link rel="stylesheet" href="styles/demo.css">
 
-  <!-- Custom fonts for this template -->
-  <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Droid+Serif:400,700,400italic,700italic&display=swap' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Bahianita|New+Rocker|OswaldRoboto:300,400,700&display=swap" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="/css/crankfish.min.css" rel="stylesheet">
-  <style>
+    <link rel="stylesheet" href="styles/colors/color-darkturquoise.css">
+    <link rel="stylesheet" href="styles/colors/color-lightblue.css">
+    <link rel="stylesheet" href="styles/colors/color-purple.css">
+    <link rel="stylesheet" href="styles/colors/color-green.css">
+    <link rel="stylesheet" href="styles/colors/color-militar.css">
+    <link rel="stylesheet" href="styles/colors/color-caqui.css">
+    <link rel="stylesheet" href="styles/colors/color-red.css">
     
-    .pace-running .loading-overlay {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 101;
-      width: 100%;
-      height: 100vh;
-      background: #000;
-      opacity: 1;
-      overflow: hidden;
-      transition: all .35s ease-in-out;
-    }
-    .pace-done .loading-overlay {
-      width: 0px;
-      height: 0px;
-      display: none;
-      overflow: hidden;
-      opacity: 0;
-      transition: all .35s ease-in-out;
-    }
-     .pace-running .loading-overlay > .loading-logo {
-       display: inline-block;
-       position: absolute;
-       top: 60%;
-       left: 50%;
-       margin: auto;
-       z-index: 102;
-       transform: translate(-50%, -60%);
-       transition: opacity .35s ease-in-out;
-     }
-     .pace-done .loading-overlay > .loading-logo  {
-       opacity: 0;
-       position: absolute;
-       bottom: -300px;
-       left: 50%;
-       transform: translateX(-50%);
-       transition: opacity .35s ease-in-out;
-     }
-     .fixed-top {
-       z-index: 90 !important;
-     }
-  </style>
-</head>
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body data-spy="scroll" data-target="#navbar-muziq" data-offset="80">
+    
+    <!-- LOADER -->
+    <div id="mask">
+        <div class="loader">
+          <!-- <img src="images/loading.gif" alt='loading'> -->
+          <div class="cssload-container">
+            <div class="cssload-shaft1"></div>
+            <div class="cssload-shaft2"></div>
+            <div class="cssload-shaft3"></div>
+            <div class="cssload-shaft4"></div>
+            <div class="cssload-shaft5"></div>
+            <div class="cssload-shaft6"></div>
+            <div class="cssload-shaft7"></div>
+            <div class="cssload-shaft8"></div>
+            <div class="cssload-shaft9"></div>
+            <div class="cssload-shaft10"></div>
+        </div>
+        </div>
+    </div>
+    
+    <!-- HEADER -->
+    <header id="jHeader">
+      <nav class="navbar navbar-default" role="navigation">
+        
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Crankfish Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#anchor00"><img src="images/logo.png" alt="logo"></a>
+        </div>
+       
+        <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbar-muziq">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#anchor00">Home</a></li>
+            <li><a href="#anchor07">News</a></li>
+            <!-- <li><a href="#anchor02">Artists</a></li> -->
+            <li><a href="#anchor03">About</a></li>
+            <li><a href="#anchor04">Albums</a></li>
+            <li><a href="#anchor05">Gigs</a></li>
+            <li><a href="#anchor06">Gallery</a></li>
+            <!-- <li><a href="blog.html">Blog</a></li>
+            <li><a href="shop.html">Shop</a></li> -->
+            <li><a href="#anchor08">Contact</a></li>
+          </ul>
+        </div>
 
-<body id="page-top">
-  <!-- LOADER -->
-  <div class="loading-overlay">
-    <a class="loading-logo" href="#"><img src="/img/logo.png" alt="logo"></a>
-  </div>
-  
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="/img/logo.png" alt="logo"></a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">about</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#music">music</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#gigs">gigs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#pics">pics</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
+      </nav>
+    </header>
+    
+    <!-- INTRO -->
+    <section class="intro full-width jIntro" id="anchor00">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="slider-intro">
+              <div id="slides">
+                <div class="overlay"></div>
+                <div class="slides-container">
+                  <img src="images/header-bg-color-modify.jpg">
+                  <img src="images/header-bg-color-modify.jpg">
+                  <img src="images/header-bg-color-modify.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vcenter text-center text-overlay">
+          <div class="logo-intro"><img src="images/demo/logo-intro.png" class="logo-icon" alt="logo icon"></div>
+          <div id="owl-main-text" class="owl-carousel">
+            <div class="item">
+              <h1 class="primary-title">TEXAS HEAVY METAL</h1>
+              <h2 class="subtitle-text">Dallas • Fort Worth</h2>
+              <div class="voffset20"></div>
+              <a href="#" class="btn btn-invert">Learn more</a>
+            </div>
+            <div class="item">
+              <h2 class="primary-title">
+                <span class="font-new-rocker textshadow-center-dark--lg " style="color: rgba(255,255,255,.65); font-size: 120px;  line-height: normal;">
+                Reborn</span></h2>
+                <span class="subtitle-text" style="font-size:32px; line-height: normal; color: rgba(235, 219, 219, 0.5)">
+                  AVAILABLE NOW ON:<br>
+                </span>
+                  <span class="subtitle-text font-Bahianita text-shadow-center-dark "  style="font-size: 16px; line-height: normal;">
+                    Spotify, Apple Music, iTunes, TikTok, Google Play, <br> 
+                    YouTube, Pandora, Deezer, Tidal, Napster, iHeart Radio, <br>
+                    Saavn, Angham, KKBox, MediaNet, plus: Instagram &amp; Facebook</span>
+                
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <!-- PLAYER -->
+    <div class="player horizontal">
+      <div class="container">
+        <div class="info-album-player">
+          <div class="album-cover" id="bg-image3"></div>
+          <p class="album-title">Represent</p>
+          <p class="artist-name">Album by Crankfish</p>
+        </div>
+        <div class="player-content">
+          <audio preload></audio>
+          <ol class="playlist">
+            <li><a href="#" data-src="mp3/Red_Swallow.mp3">Red Swallow</a></li>
+            <li><a href="#" data-src="mp3/Represent.mp3">Represent</a></li>
+            <li><a href="#" data-src="mp3/Roland.mp3">A Walk with Roland</a></li>
+            <li><a href="#" data-src="mp3/King_Pin.mp3">King Pin</a></li>
+            <li><a href="#" data-src="mp3/Syllable.mp3">Syllable</a></li>
+          </ol>
+          <div class="nextprev">
+            <span class="prev">prev</span>
+            <span class="next">next</span>
+          </div>
+          <span class="btnloop">loop</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEWS -->
+    <div class="section blog inverse-color pattern list-posts" id="anchor07">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="voffset70"></div>
+            <div class="separator-icon">
+              <i class="fa fa-microphone"></i>
+            </div>
+            <div class="voffset30"></div>
+            <p class="pretitle">that's new</p>
+            <div class="voffset20"></div>
+            <h2 class="title">What's Up with Crankfish</h2>
+            <div class="voffset80"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <article class="post-item">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="photo-post" id="image-post1"></div>
+                  <p class="date">
+                    <span class="day">01</span>
+                    <span class="month">dec</span>
+                  </p>
+                </div>
+                
+                <div class="col-sm-6">
+                  <div class="voffset30"></div>
+                  <h4 class="title small"><span>Date:</span> DEC 01 2019</h4>
+                  <h3 class="title post">Birthright has come and Jasen Moreno introduces son Julien</h3>
+                  
+                  <p>Jasen is killer on bass and can throw down hard and strong as one of the best. But did you know he has two 
+                    of his own that can sing a hurricane into retreat? That's right, and now Julien and Justen have taken role 
+                    as the vocalist pair while Jasen explores super thick string tones on bass. You can't miss the next show.
+                  </p>
+                  <a href="#" class="btn rounded open-new" data-url="news/new-01.html">Get Tickets</a>
+                  <span class="btn rounded close-new">view less</span>
+                </div>
+
+                <section class="section news-window">
+                  <div class="news-content"></div><!-- AJAX Dinamic Content -->
+                </section>
+
+              </div>
+            </article>
+            
+            <article class="post-item">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="photo-post" id="image-post1"></div>
+                  <p class="date">
+                    <span class="day">01</span>
+                    <span class="month">dec</span>
+                  </p>
+                </div>
+                
+                <div class="col-sm-6">
+                  <div class="voffset30"></div>
+                  <h4 class="title small"><span>Date:</span> DEC 01 2019</h4>
+                  <h3 class="title post">Birthright has come and Jasen Moreno introduces son Julien</h3>
+                  
+                  <p>Jasen is killer on bass and can throw down hard and strong as one of the best. But did you know he has two 
+                    of his own that can sing a hurricane into retreat? That's right, and now Julien and Justen have taken role 
+                    as the vocalist pair while Jasen explores super thick string tones on bass. You can't miss the next show.
+                  </p>
+                  <a href="#" class="btn rounded open-new" data-url="news/new-01.html">Get Tickets</a>
+                  <span class="btn rounded close-new">view less</span>
+                </div>
+
+                <section class="section news-window">
+                  <div class="news-content"></div><!-- AJAX Dinamic Content -->
+                </section>
+
+              </div>
+            </article>
+            
+            <article class="post-item">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="photo-post" id="image-post1"></div>
+                  <p class="date">
+                    <span class="day">01</span>
+                    <span class="month">dec</span>
+                  </p>
+                </div>
+                
+                <div class="col-sm-6">
+                  <div class="voffset30"></div>
+                  <h4 class="title small"><span>Date:</span> DEC 01 2019</h4>
+                  <h3 class="title post">Birthright has come and Jasen Moreno introduces son Julien</h3>
+                  
+                  <p>Jasen is killer on bass and can throw down hard and strong as one of the best. But did you know he has two 
+                    of his own that can sing a hurricane into retreat? That's right, and now Julien and Justen have taken role 
+                    as the vocalist pair while Jasen explores super thick string tones on bass. You can't miss the next show.
+                  </p>
+                  <a href="#" class="btn rounded open-new" data-url="news/new-01.html">Get Tickets</a>
+                  <span class="btn rounded close-new">view less</span>
+                </div>
+
+                <section class="section news-window">
+                  <div class="news-content"></div><!-- AJAX Dinamic Content -->
+                </section>
+
+              </div>
+            </article>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TWITTER -->
+    <!-- <section class="section twitterfeed inverse-color full-width parallax-section" data-parallax-image="images/demo/twitter/bg-twitter.jpg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <i class="fa fa-twitter"></i>
+            <div id="twitter-feed"></div>
+          </div>
+        </div>
+      </div>
+    </section>  -->
+
+    <!-- FEATURED ARTIST -->
+    <!-- <section class="section inverse-color featured-artists" id="anchor02">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="voffset70"></div>
+            <div class="separator-icon">
+              <i class="fa fa-microphone"></i>
+            </div>
+            <div class="voffset30"></div>
+            <p class="pretitle">get read for the summer 2016</p>
+            <div class="voffset20"></div>
+            <h2 class="title">featured Artist</h2>
+            <div class="voffset80"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">           
+            <div class="voffset20"></div>
+            <div class="js-flickity" data-flickity-options="{ &quot;cellAlign&quot;: &quot;left&quot;, &quot;wrapAround&quot;: true, &quot;contain&quot;: true, &quot;prevNextButtons&quot;: false }">
+              <div class="gallery-cell col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="featured-artist">
+                  <div class="image">
+                    <img src="images/demo/artists/featured-artist1.jpg" alt="">
+                  </div>
+                  <div class="rollover">
+                    <ul class="social">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    <div class="text">
+                      <h4 class="title-artist">Mike <br>Black</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam rem, quasi alias sunt velit.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-cell col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="featured-artist">
+                  <div class="image">
+                    <img src="images/demo/artists/featured-artist2.jpg" alt="">
+                  </div>
+                  <div class="rollover">
+                    <ul class="social">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    <div class="text">
+                      <h4 class="title-artist">Red <br>Dana</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam rem, quasi alias sunt velit.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-cell col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="featured-artist">
+                  <div class="image">
+                    <img src="images/demo/artists/featured-artist3.jpg" alt="">
+                  </div>
+                  <div class="rollover">
+                    <ul class="social">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    <div class="text">
+                      <h4 class="title-artist">Scorpio</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam rem, quasi alias sunt velit.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-cell col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="featured-artist">
+                  <div class="image">
+                    <img src="images/demo/artists/featured-artist4.jpg" alt="">
+                  </div>
+                  <div class="rollover">
+                    <ul class="social">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    <div class="text">
+                      <h4 class="title-artist">Mad Max</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam rem, quasi alias sunt velit.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-cell col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="featured-artist">
+                  <div class="image">
+                    <img src="images/demo/artists/featured-artist3.jpg" alt="">
+                  </div>
+                    <div class="rollover">
+                      <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                      </ul>
+                      <div class="text">
+                        <h4 class="title-artist">Dj <br>mery <br>myers</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam rem, quasi alias sunt velit.</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="voffset120"></div>
+      </div>
+    </section> -->
+
+    <!-- BIOGRAPHY -->
+    <section class="section biography inverse-color" id="anchor03">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="voffset70"></div>
+            <div class="separator-icon">
+              <i class="fa fa-microphone"></i>
+            </div>
+            <div class="voffset30"></div>
+            <p class="pretitle">About the band</p>
+            <div class="voffset20"></div>
+            <h2 class="title">biography</h2>
+            <div class="voffset110"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="images/demo/biography/biography.jpg" alt="">
+          </div>
+          <div class="col-lg-6">
+            <div class="voffset50"></div>
+            <div class="quote">
+              <p>"If I can play one note and make you cry, then that's better than thouse fancy dancers playing twenty notes."</p>
+              <p class="author">Robbie Robertson</p>
+            </div>
+            <div class="description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam iure blanditiis velit, suscipit quidem fuga, magni repudiandae atque placeat sint corporis commodi praesentium dolore necessitatibus minima nemo ipsam, perspiciatis libero, quos. Obcaecati consectetur vel nostrum praesentiu.</p>
+              <p>Obcaecati consectetur vel nostrum praesentium dolore necessitatibus minima nemo ipsam, perspiciatis libero, quos, odio quaerat asperiores repudiandae atque placeat sint corporis commodi onsectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="voffset150"></div>
+      </div>
+    </section>
+
+    <!-- DISCOGRAPHY -->
+    <section class="section discography inverse-color" id="anchor04">
+      <div id="discography"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="voffset70"></div>
+            <div class="separator-icon">
+              <i class="fa fa-music"></i>
+            </div>
+            <div class="voffset30"></div>
+            <p class="pretitle">album hightlights</p>
+            <div class="voffset20"></div>
+            <h2 class="title">Discography</h2>
+            <div class="voffset80"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="carousel-discography js-flickity" data-flickity-options="{ &quot;cellAlign&quot;: &quot;left&quot;, &quot;wrapAround&quot;: true, &quot;contain&quot;: true, &quot;prevNextButtons&quot;: false }">
+              <!-- col-xlg-3 -->
+              <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
+                <div class="info-album">
+                  <div class="cover open-disc" data-url="discs/disc-01.html">
+                    <img src="images/demo/discography/disco-1.jpg" alt="">
+                    <div class="rollover">
+                      <i class="fa fa-cart-plus"></i>
+                      <p>view album</p>
+                    </div>
+                  </div>
+                  <p class="album">Gifts of Habit</p>
+                  <p class="artist">2002</p>
+                </div>
+              </li>
+              <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
+                <div class="info-album">
+                  <div class="cover open-disc" data-url="discs/disc-02.html">
+                    <img src="images/demo/discography/disco-2.jpg" alt="">
+                    <div class="rollover">
+                      <i class="fa fa-cart-plus"></i>
+                      <p>view album</p>
+                    </div>
+                  </div>
+                  <p class="album">Red Swallow</p>
+                  <p class="artist">2003</p>
+                </div>
+              </li>
+              <li class="gallery-cell col-xs-12 col-sm-6 col-md-4"> 
+                <div class="info-album">
+                  <div class="cover open-disc" data-url="discs/disc-03.html">
+                    <img src="images/demo/discography/disco-3.jpg" alt="">
+                    <div class="rollover">
+                      <i class="fa fa-cart-plus"></i>
+                      <p>view album</p>
+                    </div>
+                  </div>
+                  <p class="album">Reborn</p>
+                  <p class="artist">2019</p>
+                </div>
+              </li>
+              <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
+                <div class="info-album">
+                  <div class="cover open-disc" data-url="discs/disc-04.html">
+                    <img src="images/demo/discography/disco-4.jpg" alt="">
+                    <div class="rollover">
+                      <i class="fa fa-cart-plus"></i>
+                      <p>view album</p>
+                    </div>
+                  </div>
+                  <p class="album">Untitled</p>
+                  <p class="artist">2020?</p>
+                </div>
+              </li>
+              <!-- <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
+                <div class="info-album">
+                  <div class="cover open-disc" data-url="discs/disc-01.html">
+                    <img src="images/demo/discography/disco-1.jpg" alt="">
+                    <div class="rollover">
+                      <i class="fa fa-cart-plus"></i>
+                      <p>view album</p>
+                    </div>
+                  </div>
+                  <p class="album">Untitled</p>
+                  <p class="artist">2020?</p>
+                </div>
+              </li> -->
+              <!-- <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
+                <div class="info-album">              
+                  <div class="cover open-disc" data-url="discs/disc-02.html">
+                    <img src="images/demo/discography/disco-2.jpg" alt="">
+                    <div class="rollover">
+                      <i class="fa fa-cart-plus"></i>
+                      <p>view album</p>
+                    </div>
+                  </div>
+                  <p class="album">under the iron sea</p>
+                  <p class="artist">Keane</p>
+                </div>
+              </li> -->
+            </ul>
+            <div class="voffset90"></div>
+          </div>
+        </div>
+      </div>
+      <!-- DETAILS DISCO -->
+      <div id="project-show"></div>
+      <div class="section player-album project-window inverse-color">
+          <div class="project-content"></div><!-- AJAX Dinamic Content -->
+      </div>
+    </section>
+
+    <!-- TOUR DATES -->
+    <section class="section full-width inverse-color tourdates" id="anchor05">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="voffset70"></div>
+            <div class="separator-icon">
+              <i class="fa fa-microphone"></i>
+            </div>
+            <div class="voffset30"></div>
+            <p class="pretitle">get ready for the live show</p>
+            <div class="voffset20"></div>
+            <h2 class="title">tour dates</h2>
+            <div class="voffset80"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="image-tour"></div>
+          </div>
+          <div class="col-sm-6">
+            <div class="tour-info">
+              <ul class="carousel-dates jcarouselDates">
+                <li class="gallery-cell" id="tour1">
+                  <div class="vcenter">
+                    <p class="name-tour">Built<br>to spill</p>
+                    <p class="separator">live</p>
+                    <p class="subtitle-tour">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum atque tempore iste.</p>
+                    <p class="buy">
+                      <a href="#" class="btn rounded icon"><i class="fa fa-ticket"></i> buy ticket</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="gallery-cell" id="tour2">
+                  <div class="vcenter">
+                    <p class="name-tour">Show in las Vegas</p>
+                    <p class="separator">live</p>
+                    <p class="subtitle-tour">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum atque tempore iste.</p>
+                    <p class="buy">
+                      <a href="#" class="btn rounded icon"><i class="fa fa-ticket"></i> buy ticket</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="gallery-cell" id="tour3">
+                  <div class="vcenter">
+                    <p class="name-tour">Live in New York</p>
+                    <p class="separator">live</p>
+                    <p class="subtitle-tour">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum atque tempore iste.</p>
+                    <p class="buy">
+                      <a href="#" class="btn rounded icon"><i class="fa fa-ticket"></i> buy ticket</a>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <ul class="dates-tour button-group">
+                <li class="button active">
+                  november
+                  <span>09</span>
+                </li>
+                <li class="button">
+                  november
+                  <span>08</span>
+                </li>
+                <li class="button">
+                  november
+                  <span>01</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMMING EVENTS -->
+    <section class="section full-width upcomming-events-list inverse-color">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h4 class="upcomming-events-list-title">upcoming events</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul>
+              <li>
+                <div>
+                  <p class="date-event">21 <span>Jan'16</span></p>
+                  <p class="name">
+                    <span>Live show  New York</span> 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim perferendis, doloremque esse.
+                  </p>
+                  <p class="venue">
+                    venue
+                    <span>Madison Square Garden</span>
+                  </p>
+                  <p class="price">
+                    tickets
+                    <span>$19</span>
+                  </p>
+                  <p class="buy">
+                    <a href="#" class="btn rounded icon"><i class="fa fa-ticket"></i> buy ticket</a>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p class="date-event">25 <span>Jan'16</span></p>
+                  <p class="name">
+                    <span>Live Tour Los Angeles</span> 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim perferendis, doloremque esse.
+                  </p>
+                  <p class="venue">
+                    venue
+                    <span>Glam Club</span>
+                  </p>
+                  <p class="price">
+                    tickets
+                    <span>$19</span>
+                  </p>
+                  <p class="buy">
+                    <a href="#" class="btn rounded icon"><i class="fa fa-ticket"></i> buy ticket</a>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <p class="date-event">01 <span>Feb'16</span></p>
+                  <p class="name">
+                    <span>Live Show  Boston</span> 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim perferendis, doloremque esse.
+                  </p>
+                  <p class="venue">
+                    venue
+                    <span>Howard Theater</span>
+                  </p>
+                  <p class="price">
+                    tickets
+                    <span>$19</span>
+                  </p>
+                  <p class="buy">
+                    <a href="#" class="btn rounded icon"><i class="fa fa-ticket"></i> buy ticket</a>
+                  </p>
+                </div>
+              </li>
+
+              <li class="more">
+                <div>
+                  <p class="date-event">15 <span>Feb'16</span></p>
+                  <p class="name">
+                    <span>Live Tour Los Angeles</span> 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim perferendis, doloremque esse.
+                  </p>
+                  <p class="venue">
+                    venue
+                    <span>Sugar Night Club</span>
+                  </p>
+                  <p class="price">
+                    tickets
+                    <span>$19</span>
+                  </p>
+                  <p class="buy">
+                    <a href="#" class="btn rounded icon"><i class="fa fa-ticket"></i> buy ticket</a>
+                  </p>
+                </div>
+              </li>
+              <li class="more">
+                <div>
+                  <p class="date-event">24 <span>Feb'16</span></p>
+                  <p class="name">
+                    <span>Live Show London</span> 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim perferendis, doloremque esse.
+                  </p>
+                  <p class="venue">
+                    venue
+                    <span>Monarch Theater</span>
+                  </p>
+                  <p class="price">
+                    tickets
+                    <span>$19</span>
+                  </p>
+                  <p class="buy">
+                    <a href="#" class="btn rounded icon"><i class="fa fa-ticket"></i> buy ticket</a>
+                  </p>
+                </div>
+              </li>
+              <li class="more">
+                <div>
+                  <p class="date-event">05 <span>Mar'16</span></p>
+                  <p class="name">
+                    <span>Live Show  New York</span> 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim perferendis, doloremque esse.
+                  </p>
+                  <p class="venue">
+                    venue
+                    <span>Madison Square Garden</span>
+                  </p>
+                  <p class="price">
+                    tickets
+                    <span>$19</span>
+                  </p>
+                  <p class="buy">
+                    <a href="#" class="btn rounded icon"><i class="fa fa-ticket"></i> buy ticket</a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <p class="view-all-events">
+              <a id="more-events" href="#" class="btn rounded border">View all events</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST MEDIA -->
+    <section class="section last-media inverse-color bg-patern" id="anchor06">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="voffset90"></div>
+            <div class="separator-icon">
+              <i class="fa fa-picture-o"></i>
+            </div>
+            <div class="voffset30"></div>
+            <p class="pretitle">get read for the last stuff</p>
+            <div class="voffset20"></div>
+            <h2 class="title">latest media</h2>
+            <div class="voffset50"></div>
+          </div>
+        </div>
+        <!-- Filters -->
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="filters">
+              <li data-filter="*" class="is-checked wow fadeInUp" data-wow-delay="0.5s">All</li>
+              <li data-filter=".music" class="wow fadeInUp" data-wow-delay="0.8s">Music</li>
+              <li data-filter=".concert" class="wow fadeInUp" data-wow-delay="1s">Concert</li>
+              <li data-filter=".video" class="wow fadeInUp" data-wow-delay="1.2s">Video</li>
+              <li data-filter=".dj" class="wow fadeInUp" data-wow-delay="1.4s">Dj</li>
+              <li data-filter=".events" class="wow fadeInUp" data-wow-delay="1.6s">Events</li>
+              <li data-filter=".party" class="wow fadeInUp" data-wow-delay="1.8s">Party</li>
+            </ul>
+          </div>
+        </div>
+        <!-- gallery -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="voffset50"></div>
+            <div class="thumbnails">
+              <div class="thumbnail video">
+                <a href="https://vimeo.com/5182570" class="swipebox"> <!-- data-fancybox-type="iframe" -->
+                  <img src="images/demo/gallery/gallery1.jpg" alt="">
+                  <div class="rollover">
+                    <i class="video"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="thumbnail concert">
+                <a href="images/demo/gallery/gallery2.jpg" class="swipebox">
+                  <img src="images/demo/gallery/gallery2.jpg" alt="">
+                  <div class="rollover">
+                    <i class="plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="thumbnail music">
+                <a href="images/demo/gallery/gallery3.jpg" class="swipebox">
+                  <img src="images/demo/gallery/gallery3.jpg" alt="">
+                  <div class="rollover">
+                    <i class="plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="thumbnail small dj">
+                <a href="images/demo/gallery/gallery4.jpg" class="swipebox">
+                  <img src="images/demo/gallery/gallery4.jpg" alt="">
+                  <div class="rollover">
+                    <i class="plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="thumbnail small events">
+                <a href="images/demo/gallery/gallery5.jpg" class="swipebox">
+                  <img src="images/demo/gallery/gallery5.jpg" alt="">
+                  <div class="rollover">
+                    <i class="plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="thumbnail small party">
+                <a href="images/demo/gallery/gallery6.jpg" class="swipebox">
+                  <img src="images/demo/gallery/gallery6.jpg" alt="">
+                  <div class="rollover">
+                    <i class="plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="thumbnail small music">
+                <a href="images/demo/gallery/gallery7.jpg" class="swipebox">
+                  <img src="images/demo/gallery/gallery7.jpg" alt="">
+                  <div class="rollover">
+                    <i class="plus"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="voffset50"></div>
+            <p class="loadmore">
+              <a id="append" href="#" class="btn rounded border">Load more</a>
+            </p>
+            <div id="more-items">
+              <div class="thumbnail video">
+                <a href="images/demo/gallery/gallery2.jpg" class="swipebox">
+                  <img src="images/demo/gallery/gallery2.jpg" alt="">
+                  <div class="rollover">
+                    <i class="plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="thumbnail concert">
+                <a href="images/demo/gallery/gallery1.jpg" class="swipebox">
+                  <img src="images/demo/gallery/gallery1.jpg" alt="">
+                  <div class="rollover">
+                    <i class="plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="thumbnail small dj">
+                <a href="images/demo/gallery/gallery5.jpg" class="swipebox">
+                  <img src="images/demo/gallery/gallery5.jpg" alt="">
+                  <div class="rollover">
+                    <i class="plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="thumbnail small events">
+                <a href="images/demo/gallery/gallery4.jpg" class="swipebox">
+                  <img src="images/demo/gallery/gallery4.jpg" alt="">
+                  <div class="rollover">
+                    <i class="plus"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="voffset80"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="section inverse-color contact" id="anchor08">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="voffset70"></div>
+            <div class="separator-icon">
+              <i class="fa fa fa-microphone"></i>
+            </div>
+            <div class="voffset30"></div>
+            <p class="pretitle">get it touch</p>
+            <div class="voffset20"></div>
+            <h2 class="title">say hello!</h2>
+            <div class="voffset80"></div>
+          </div>
+        </div>       
+        <div class="row">
+          <div class="col-sm-6 col-md-7">
+            <form action="mail.php" method="post" id="contactform" class="contact-form">
+              <div class="form-group">
+                <label class="title small" for="name">Your name:</label>
+                <input type="text" placeholder="Full Name" name="name" id="name" class="text name required">
+              </div>
+              
+              <div class="form-group">
+                <label class="title small" for="email">Your email:</label>
+                <input type="email" placeholder="Your Email" name="email" id="email" class="text email required">
+              </div>
+              
+              <div class="form-group">
+                <label class="title small" for="message">Your message:</label>
+                <textarea name="message" class="text area required" id="message" placeholder="Type Message"></textarea>
+              </div>
+
+              <!-- <div class="formSent"><p><strong>Your Message Has Been Sent!</strong> Thank you for contacting us.</p></div> -->
+              <input type="submit" value="Submit" class="btn rounded">   
+              <div class="voffset80"></div>            
+            </form>
+          </div>
+          <div class="col-sm-6 col-md-5">
+            <div class="col-contact">
+              <h4 class="title small">Music studio</h4>
+              <div class="voffset20"></div>
+              <p>1814 NE Miami Gardens Drive Suite #1007</p>
+              <p>North Miami Beach, FL, 333179</p>
+              <ul class="contact">
+                <li><i class="fa fa-phone"></i> 1.800.987.7890</li>
+                <li><i class="fa fa-envelope"></i> booking@visionmax.com</li>
+              </ul>
+              <h4 class="title small">Get socialized with us</h4>
+              <ul class="social-links">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p class="copy">© 2016. All Rights Reserved. Designed by JellyThemes</p>
+        <ul class="menu-footer">
+          <li><a href="#">disclaimer</a></li>
+          <li><a href="#">terms & conditions</a></li>
+          <li><a href="#">privacy policy</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </footer>
 
-  <!-- Header -->
-  <header class="masthead">
-    <div class="vid-overlay"></div>
-      <div id="video-background" class="vid-bg">
-        <video id="vidPlayer" class="vidplayer" autoplay="true" muted preload="true" style="width: 100%;" loop muted plays-inline>
-          
-        </video>
-      </div>
-    <div class="container">
-      <div class="intro-text">
-        <div class="intro-lead-in">Dallas, Tx</div>
-        <div class="intro-heading text-uppercase">HEAVY META NASTY</div>
-        <a class="btn btn-secondary btn-xl text-uppercase js-scroll-trigger" href="#services">COME INSIDE</a>
-      </div>
-    </div>
-  </header>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-  <!-- Services -->
-  <section class="page-section" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">about</h2>
-          <h3 class="section-subheading text-muted">A brief history of the band.</h3>
-        </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">E-Commerce</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Responsive Design</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Web Security</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Grid -->
-  <section class="page-section" id="music">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Portfolio</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Threads</h4>
-            <p class="text-muted">Illustration</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Explore</h4>
-            <p class="text-muted">Graphic Design</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Finish</h4>
-            <p class="text-muted">Identity</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Lines</h4>
-            <p class="text-muted">Branding</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Southwest</h4>
-            <p class="text-muted">Website Design</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Window</h4>
-            <p class="text-muted">Photography</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="page-section" id="gigs">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">About</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="timeline">
-            <li>
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>2009-2011</h4>
-                  <h4 class="subheading">Our Humble Beginnings</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>March 2011</h4>
-                  <h4 class="subheading">An Agency is Born</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>December 2012</h4>
-                  <h4 class="subheading">Transition to Full Service</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>July 2014</h4>
-                  <h4 class="subheading">Phase Two Expansion</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image">
-                <h4>Be Part
-                  <br>Of Our
-                  <br>Story!</h4>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team -->
-  <section class=" page-section" id="pics">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-            <h4>Kay Garland</h4>
-            <p class="text-muted">Lead Designer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-            <h4>Larry Parker</h4>
-            <p class="text-muted">Lead Marketer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-            <h4>Diana Pertersen</h4>
-            <p class="text-muted">Lead Developer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Clients -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="page-section" id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Contact Us</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <form id="contactForm" name="sentMessage" novalidate="novalidate">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="form-group">
-                  <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="form-group">
-                  <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="clearfix"></div>
-              <div class="col-lg-12 text-center">
-                <div id="success"></div>
-                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; Your Website 2019</span>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline quicklinks">
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Portfolio Modals -->
-
-  <!-- Modal 1 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Threads</li>
-                  <li>Category: Illustration</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 2 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Explore</li>
-                  <li>Category: Graphic Design</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 3 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Finish</li>
-                  <li>Category: Identity</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 4 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Lines</li>
-                  <li>Category: Branding</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 5 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Southwest</li>
-                  <li>Category: Website Design</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 6 -->
-  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Window</li>
-                  <li>Category: Photography</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Contact form JavaScript -->
-  <script src="/js/src/contact_me.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="/js/src/jqBootstrapValidation.js"></script>
-  <script src="/components/audioplayer/player.js"></script>
-  <script src="js/src/agency.min.js"></script>
-  <script src="/components/audioplayer/js/functions.js"></script> 
-  <script>
-    const vidPlayer = document.querySelector('#vidPlayer');
-    const eventLog = document.querySelector('.event-log-contents');
-    let vidSource = null;
     
-    if (vidSource) {
-      document.location.reload();
-    } else {            
-      vidSource = document.createElement('source');
-      vidSource.setAttribute('src', '/vid/hp-bg.mp4');
-      vidSource.setAttribute('type', 'video/mp4');
 
-      vidPlayer.appendChild(vidSource);
-  }
-  </script>
-</body>
+    <script src="scripts/vendor/jquery.js"></script>
+    <script src="scripts/vendor/jquery.superslides.min.js"></script>
+    <script src="scripts/vendor/flickity.pkgd.js"></script>
+    <script src="scripts/vendor/audio.min.js"></script>
+    <!-- <script src="scripts/vendor/twitterFetcher_min.js"></script> -->
+    <script src="scripts/vendor/isotope.pkgd.min.js"></script>
+    <script src="scripts/vendor/jquery.swipebox.min.js"></script>
+    <script src="scripts/vendor/TimeCircles.js"></script>
+    <script src="scripts/vendor/owl.carousel.min.js"></script>
+    <script src="scripts/vendor/jquery.parallax.min.js"></script>
 
+    <script src="scripts/discography.js"></script>
+    <script src="scripts/news.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <script src="scripts/vendor/bootstrap.js"></script>
+
+  </body>
 </html>
