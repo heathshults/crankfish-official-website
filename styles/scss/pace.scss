@@ -1,0 +1,61 @@
+#isItLoaded {
+
+  display: none;
+
+  .pace-running .loading-overlay {}
+
+  #loading {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    right: 0;
+    flex-flow: row nowrap;
+    bottom: 0;
+    justify-content: center;
+    left: 0;
+    align-items: center;
+    z-index: 101;
+    width: 100%;
+    width: 100%;
+    height: 90vh;
+    height: 100vh;
+    background: #000;
+    opacity: 1;
+    overflow: hidden;
+    transition: all .35s ease-in-out;
+  }
+
+  .pace-done .loading-overlay {
+    width: 0px;
+    height: 0px;
+    display: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .35s ease-in-out;
+  }
+}
+
+.pace-running .loading-overlay>.loading-logo {
+  display: inline-block;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin: auto;
+  z-index: 102;
+  transform: translate(-50%, -60%);
+  transition: opacity .35s ease-in-out;
+}
+
+.pace-done .loading-overlay>.loading-logo {
+  opacity: 0;
+  position: absolute;
+  bottom: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity .35s ease-in-out;
+}
+
+.fixed-top {
+  z-index: 90 !important;
+}

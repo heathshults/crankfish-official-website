@@ -1,9 +1,9 @@
 /* Loading */
-$(window).load(function() {
-  $(".loader").delay(500).fadeOut();
-  $("#mask").delay(1000).fadeOut("slow");
-  $("body").addClass("loaded");
-});
+// $(window).load(function() {
+//   $(".loader").delay(500).fadeOut();
+//   $("#mask").delay(1000).fadeOut("slow");
+//   $("body").addClass("loaded");
+// });
 
 
 

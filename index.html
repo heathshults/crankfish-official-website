@@ -11,12 +11,23 @@
      <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <script src="js/src/pace.min.js"></script>
+    <script>
+      <script src="js/src/pace.min.js"></script>
+  <script>
+    paceOptions = {
+      elements: {
+        selectors: [
+        '#vidPlayer,.vidplayer'// , 
+        //'.user-profile,.profile-error'
+        ]
+      }
+    }
+    </script>
 
-   <!-- <link href='https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Droid+Serif:400,700,400italic,700italic&display=swap' rel='stylesheet' type='text/css'> -->
+   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Droid+Serif:400,700,400italic,700italic&display=swap" rel="stylesheet" type="text/css">
    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet" type="text/css">
-   <link href="https://fonts.googleapis.com/css?family=Bahianita|New+Rocker|OswaldRoboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&display=swap" rel="stylesheet" ' type='text/css'> 
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+   <link href="https://fonts.googleapis.com/css?family=Bahianita|New+Rocker|OswaldRoboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&display=swap" rel="stylesheet" type="text/css"> 
 
     <link rel="stylesheet" href="styles/vendor/bootstrap.css">
     <link rel="stylesheet" href="styles/vendor/font-awesome.min.css">
@@ -38,27 +49,17 @@
     <link rel="stylesheet" href="styles/colors/color-caqui.css">
     <link rel="stylesheet" href="styles/colors/color-red.css">
     
-    <script src="scripts/vendor/modernizr.js"></script>
+    <script src="/scripts/vendor/modernizr.js"></script>
+    
+    
   </head>
-  <body data-spy="scroll" data-target="#navbar-muziq" data-offset="80">
+  <body class="pace-done" data-spy="scroll" data-target="#navbar-crankfish" data-offset="80">
     
     <!-- LOADER -->
-    <div id="mask">
-        <div class="loader">
-          <!-- <img src="images/loading.gif" alt='loading'> -->
-          <div class="cssload-container">
-            <div class="cssload-shaft1"></div>
-            <div class="cssload-shaft2"></div>
-            <div class="cssload-shaft3"></div>
-            <div class="cssload-shaft4"></div>
-            <div class="cssload-shaft5"></div>
-            <div class="cssload-shaft6"></div>
-            <div class="cssload-shaft7"></div>
-            <div class="cssload-shaft8"></div>
-            <div class="cssload-shaft9"></div>
-            <div class="cssload-shaft10"></div>
-        </div>
-        </div>
+    
+    <!-- LOADER -->
+    <div class="loading-overlay">
+      <a class="loading-logo" href="#"><img src="/images/logo.png" alt="logo"></a>
     </div>
     
     <!-- HEADER -->
@@ -67,26 +68,26 @@
         
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Crankfish Navigation</span>
+            <span class="sr-only">Crankfish Web Menu</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#anchor00"><img src="images/logo.png" alt="logo"></a>
+          <a class="navbar-brand" href="#Home"><img src="images/logo.png" alt="logo"></a>
         </div>
        
-        <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbar-muziq">
+        <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbar-crankfish">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#anchor00">Home</a></li>
-            <li><a href="#anchor07">News</a></li>
+            <li class="active"><a href="#Home">Home</a></li>
+            <li><a href="#News">News</a></li>
             <!-- <li><a href="#anchor02">Artists</a></li> -->
-            <li><a href="#anchor03">About</a></li>
-            <li><a href="#anchor04">Albums</a></li>
-            <li><a href="#anchor05">Gigs</a></li>
-            <li><a href="#anchor06">Gallery</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Albums">Albums</a></li>
+            <li><a href="#Gigs">Gigs</a></li>
+            <li><a href="#Gallery">Gallery</a></li>
             <!-- <li><a href="blog.html">Blog</a></li>
             <li><a href="shop.html">Shop</a></li> -->
-            <li><a href="#anchor08">Contact</a></li>
+            <li><a href="#Contact">Contact</a></li>
           </ul>
         </div>
 
@@ -94,31 +95,36 @@
     </header>
     
     <!-- INTRO -->
-    <section class="intro full-width jIntro" id="anchor00">
+    <section class="intro full-width jIntro" id="Home">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="slider-intro">
               <div id="slides">
                 <div class="overlay"></div>
-                <div class="slides-container">
-                  <img src="images/header-bg-color-modify.jpg">
-                  <img src="images/header-bg-color-modify.jpg">
-                  <img src="images/header-bg-color-modify.jpg">
+                  <div class="slides-container">
+                    <div id="video-background" class="">
+                      <video autoplay="true" loop muted plays-inline>
+                        <source
+                          src="/vid/hp-bg.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  {{/*  <img src="images/header-bg-color-modify.jpg">
+                  <img src="images/header-bg-color-modify.jpg">  */}}
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="vcenter text-center text-overlay">
-          <div class="logo-intro"><img src="images/demo/logo-intro.png" class="logo-icon" alt="logo icon"></div>
+        <div class="hero vcenter text-center text-overlay">
+          <div class="logo-intro"><img src="/images/demo/logo-intro.png" class="logo-icon" alt="logo icon"></div>
           <div id="owl-main-text" class="owl-carousel">
             <div class="item">
               <h1 class="primary-title">TEXAS HEAVY METAL</h1>
               <h2 class="subtitle-text">Dallas • Fort Worth</h2>
               <div class="voffset20"></div>
-              <a href="#" class="btn btn-invert">Learn more</a>
+              <a href="#" class="btn btn-invert">Come Inside</a>
             </div>
             <div class="item">
               <h2 class="primary-title">
@@ -166,7 +172,7 @@
     </div>
 
     <!-- NEWS -->
-    <div class="section blog inverse-color pattern list-posts" id="anchor07">
+    <div class="section blog inverse-color pattern list-posts" id="News">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
@@ -408,7 +414,7 @@
     </section> -->
 
     <!-- BIOGRAPHY -->
-    <section class="section biography inverse-color" id="anchor03">
+    <section class="section biography inverse-color" id="About">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
@@ -444,7 +450,7 @@
     </section>
 
     <!-- DISCOGRAPHY -->
-    <section class="section discography inverse-color" id="anchor04">
+    <section class="section discography inverse-color" id="Albums">
       <div id="discography"></div>
       <div class="container">
         <div class="row">
@@ -555,7 +561,7 @@
     </section>
 
     <!-- TOUR DATES -->
-    <section class="section full-width inverse-color tourdates" id="anchor05">
+    <section class="section full-width inverse-color tourdates" id="localhost:9501/www/index.html">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
@@ -773,7 +779,7 @@
     </section>
 
     <!-- LATEST MEDIA -->
-    <section class="section last-media inverse-color bg-patern" id="anchor06">
+    <section class="section last-media inverse-color bg-patern" id="Gallery">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
@@ -909,7 +915,7 @@
     </section>
 
     <!-- CONTACTS -->
-    <section class="section inverse-color contact" id="anchor08">
+    <section class="section inverse-color contact" id="Contact">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
@@ -974,7 +980,7 @@
     <!-- FOOTER -->
     <footer>
       <div class="container">
-        <p class="copy">© 2016. All Rights Reserved. Designed by JellyThemes</p>
+        <p class="copy">© 2020. All Rights Reserved. Designed by HeathenScript</p>
         <ul class="menu-footer">
           <li><a href="#">disclaimer</a></li>
           <li><a href="#">terms & conditions</a></li>
