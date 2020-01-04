@@ -2,58 +2,47 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+  <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Crankfish Official Website</title>
     <meta name="description" content="">
      <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-    <script src="js/src/pace.min.js"></script>
-    <script>
-      <script src="js/src/pace.min.js"></script>
-  <script>
-    paceOptions = {
-      elements: {
-        selectors: [
-        '#vidPlayer,.vidplayer'// , 
-        //'.user-profile,.profile-error'
-        ]
-      }
-    }
-    </script>
+    
 
    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Droid+Serif:400,700,400italic,700italic&display=swap" rel="stylesheet" type="text/css">
    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet" type="text/css">
    <link href="https://fonts.googleapis.com/css?family=Bahianita|New+Rocker|OswaldRoboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&display=swap" rel="stylesheet" type="text/css"> 
 
-    <link rel="stylesheet" href="styles/vendor/bootstrap.css">
-    <link rel="stylesheet" href="styles/vendor/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/vendor/superslides.css">
-    <link rel="stylesheet" href="styles/vendor/owl.carousel.css">
-    <link rel="stylesheet" href="styles/vendor/owl.transitions.css">
-    <link rel="stylesheet" href="styles/vendor/flickity.min.css">
-    <link rel="stylesheet" href="styles/vendor/swipebox.min.css">
-    <link rel="stylesheet" href="styles/vendor/TimeCircles.css">
+    <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/vendor/superslides.css">
+    <link rel="stylesheet" href="/styles/vendor/owl.carousel.css">
+    <link rel="stylesheet" href="/styles/vendor/owl.transitions.css">
+    <link rel="stylesheet" href="/styles/vendor/flickity.min.css">
+    <link rel="stylesheet" href="/styles/vendor/swipebox.min.css">
+    <link rel="stylesheet" href="/styles/vendor/TimeCircles.css">
 
-    <link rel="stylesheet" href="styles/main-hardrock.css">
-    <link rel="stylesheet" href="styles/demo.css">
+    <link rel="stylesheet" href="/styles/main-hardrock.css">
+    <link rel="stylesheet" href="/styles/demo.css">
 
-    <link rel="stylesheet" href="styles/colors/color-darkturquoise.css">
-    <link rel="stylesheet" href="styles/colors/color-lightblue.css">
-    <link rel="stylesheet" href="styles/colors/color-purple.css">
-    <link rel="stylesheet" href="styles/colors/color-green.css">
-    <link rel="stylesheet" href="styles/colors/color-militar.css">
-    <link rel="stylesheet" href="styles/colors/color-caqui.css">
-    <link rel="stylesheet" href="styles/colors/color-red.css">
+    <link rel="stylesheet" href="/styles/colors/color-darkturquoise.css">
+    <link rel="stylesheet" href="/styles/colors/color-lightblue.css">
+    <link rel="stylesheet" href="/styles/colors/color-purple.css">
+    <link rel="stylesheet" href="/styles/colors/color-green.css">
+    <link rel="stylesheet" href="/styles/colors/color-militar.css">
+    <link rel="stylesheet" href="/styles/colors/color-caqui.css">
+    <link rel="stylesheet" href="/styles/colors/color-red.css">
     
     <script src="/scripts/vendor/modernizr.js"></script>
     
     
   </head>
-  <body class="pace-done" data-spy="scroll" data-target="#navbar-crankfish" data-offset="80">
+  <body class="" data-spy="scroll" data-target="#navbar-crankfish" data-offset="80">
     
     <!-- LOADER -->
     
@@ -73,7 +62,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#Home"><img src="images/logo.png" alt="logo"></a>
+          <a class="navbar-brand" href="#Home"><img src="/images/logo.png" alt="logo"></a>
         </div>
        
         <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbar-crankfish">
@@ -101,23 +90,22 @@
           <div class="col-md-12">
             <div class="slider-intro">
               <div id="slides">
-                <div class="overlay"></div>
+                <div class="bg-video-overlay"></div>
                   <div class="slides-container">
                     <div id="video-background" class="">
-                      <video autoplay="true" loop muted plays-inline>
-                        <source
-                          src="/vid/hp-bg.mp4" type="video/mp4">
+                      <video id="bg-vid" class="" autoplay="true" loop muted plays-inline>
+                        <!--  <source src="/vid/hp-bg.mp4" type="video/mp4">  -->
                       </video>
                     </div>
-                  {{/*  <img src="images/header-bg-color-modify.jpg">
-                  <img src="images/header-bg-color-modify.jpg">  */}}
+                  <!--<img src="/images/header-bg-color-modify.jpg">
+                  <img src="/images/header-bg-color-modify.jpg">  -->
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="hero vcenter text-center text-overlay">
+        <div class="hero vcenter text-center text-overlay d-flex vh-100">
           <div class="logo-intro"><img src="/images/demo/logo-intro.png" class="logo-icon" alt="logo icon"></div>
           <div id="owl-main-text" class="owl-carousel">
             <div class="item">
@@ -133,10 +121,11 @@
                 <span class="subtitle-text" style="font-size:32px; line-height: normal; color: rgba(235, 219, 219, 0.5)">
                   AVAILABLE NOW ON:<br>
                 </span>
-                  <span class="subtitle-text font-Bahianita text-shadow-center-dark "  style="font-size: 16px; line-height: normal;">
+                  <span class="subtitle-text font-Bahianita text-shadow-center-dark"  style="font-size: 16px; line-height: normal;">
                     Spotify, Apple Music, iTunes, TikTok, Google Play, <br> 
                     YouTube, Pandora, Deezer, Tidal, Napster, iHeart Radio, <br>
-                    Saavn, Angham, KKBox, MediaNet, plus: Instagram &amp; Facebook</span>
+                    Saavn, Angham, KKBox, MediaNet, plus: Instagram &amp; Facebook
+                  </span>
                 
               </div>
           </div>
@@ -319,7 +308,7 @@
               <div class="gallery-cell col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="featured-artist">
                   <div class="image">
-                    <img src="images/demo/artists/featured-artist1.jpg" alt="">
+                    <img src="/images/demo/artists/featured-artist1.jpg" alt="">
                   </div>
                   <div class="rollover">
                     <ul class="social">
@@ -337,7 +326,7 @@
               <div class="gallery-cell col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="featured-artist">
                   <div class="image">
-                    <img src="images/demo/artists/featured-artist2.jpg" alt="">
+                    <img src="/images/demo/artists/featured-artist2.jpg" alt="">
                   </div>
                   <div class="rollover">
                     <ul class="social">
@@ -355,7 +344,7 @@
               <div class="gallery-cell col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="featured-artist">
                   <div class="image">
-                    <img src="images/demo/artists/featured-artist3.jpg" alt="">
+                    <img src="/images/demo/artists/featured-artist3.jpg" alt="">
                   </div>
                   <div class="rollover">
                     <ul class="social">
@@ -373,7 +362,7 @@
               <div class="gallery-cell col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="featured-artist">
                   <div class="image">
-                    <img src="images/demo/artists/featured-artist4.jpg" alt="">
+                    <img src="/images/demo/artists/featured-artist4.jpg" alt="">
                   </div>
                   <div class="rollover">
                     <ul class="social">
@@ -391,7 +380,7 @@
               <div class="gallery-cell col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="featured-artist">
                   <div class="image">
-                    <img src="images/demo/artists/featured-artist3.jpg" alt="">
+                    <img src="/images/demo/artists/featured-artist3.jpg" alt="">
                   </div>
                     <div class="rollover">
                       <ul class="social">
@@ -431,7 +420,7 @@
         </div>
         <div class="row">
           <div class="col-lg-6">
-            <img src="images/demo/biography/biography.jpg" alt="">
+            <img src="/images/demo/biography/biography.jpg" alt="">
           </div>
           <div class="col-lg-6">
             <div class="voffset50"></div>
@@ -473,7 +462,7 @@
               <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
                 <div class="info-album">
                   <div class="cover open-disc" data-url="discs/disc-01.html">
-                    <img src="images/demo/discography/disco-1.jpg" alt="">
+                    <img src="/images/demo/discography/disco-1.jpg" alt="">
                     <div class="rollover">
                       <i class="fa fa-cart-plus"></i>
                       <p>view album</p>
@@ -486,7 +475,7 @@
               <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
                 <div class="info-album">
                   <div class="cover open-disc" data-url="discs/disc-02.html">
-                    <img src="images/demo/discography/disco-2.jpg" alt="">
+                    <img src="/images/demo/discography/disco-2.jpg" alt="">
                     <div class="rollover">
                       <i class="fa fa-cart-plus"></i>
                       <p>view album</p>
@@ -499,7 +488,7 @@
               <li class="gallery-cell col-xs-12 col-sm-6 col-md-4"> 
                 <div class="info-album">
                   <div class="cover open-disc" data-url="discs/disc-03.html">
-                    <img src="images/demo/discography/disco-3.jpg" alt="">
+                    <img src="/images/demo/discography/disco-3.jpg" alt="">
                     <div class="rollover">
                       <i class="fa fa-cart-plus"></i>
                       <p>view album</p>
@@ -512,7 +501,7 @@
               <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
                 <div class="info-album">
                   <div class="cover open-disc" data-url="discs/disc-04.html">
-                    <img src="images/demo/discography/disco-4.jpg" alt="">
+                    <img src="/images/demo/discography/disco-4.jpg" alt="">
                     <div class="rollover">
                       <i class="fa fa-cart-plus"></i>
                       <p>view album</p>
@@ -525,7 +514,7 @@
               <!-- <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
                 <div class="info-album">
                   <div class="cover open-disc" data-url="discs/disc-01.html">
-                    <img src="images/demo/discography/disco-1.jpg" alt="">
+                    <img src="/images/demo/discography/disco-1.jpg" alt="">
                     <div class="rollover">
                       <i class="fa fa-cart-plus"></i>
                       <p>view album</p>
@@ -538,7 +527,7 @@
               <!-- <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
                 <div class="info-album">              
                   <div class="cover open-disc" data-url="discs/disc-02.html">
-                    <img src="images/demo/discography/disco-2.jpg" alt="">
+                    <img src="/images/demo/discography/disco-2.jpg" alt="">
                     <div class="rollover">
                       <i class="fa fa-cart-plus"></i>
                       <p>view album</p>
@@ -815,7 +804,7 @@
             <div class="thumbnails">
               <div class="thumbnail video">
                 <a href="https://vimeo.com/5182570" class="swipebox"> <!-- data-fancybox-type="iframe" -->
-                  <img src="images/demo/gallery/gallery1.jpg" alt="">
+                  <img src="/images/demo/gallery/gallery1.jpg" alt="">
                   <div class="rollover">
                     <i class="video"></i>
                   </div>
@@ -823,7 +812,7 @@
               </div>
               <div class="thumbnail concert">
                 <a href="images/demo/gallery/gallery2.jpg" class="swipebox">
-                  <img src="images/demo/gallery/gallery2.jpg" alt="">
+                  <img src="/images/demo/gallery/gallery2.jpg" alt="">
                   <div class="rollover">
                     <i class="plus"></i>
                   </div>
@@ -831,7 +820,7 @@
               </div>
               <div class="thumbnail music">
                 <a href="images/demo/gallery/gallery3.jpg" class="swipebox">
-                  <img src="images/demo/gallery/gallery3.jpg" alt="">
+                  <img src="/images/demo/gallery/gallery3.jpg" alt="">
                   <div class="rollover">
                     <i class="plus"></i>
                   </div>
@@ -839,7 +828,7 @@
               </div>
               <div class="thumbnail small dj">
                 <a href="images/demo/gallery/gallery4.jpg" class="swipebox">
-                  <img src="images/demo/gallery/gallery4.jpg" alt="">
+                  <img src="/images/demo/gallery/gallery4.jpg" alt="">
                   <div class="rollover">
                     <i class="plus"></i>
                   </div>
@@ -847,7 +836,7 @@
               </div>
               <div class="thumbnail small events">
                 <a href="images/demo/gallery/gallery5.jpg" class="swipebox">
-                  <img src="images/demo/gallery/gallery5.jpg" alt="">
+                  <img src="/images/demo/gallery/gallery5.jpg" alt="">
                   <div class="rollover">
                     <i class="plus"></i>
                   </div>
@@ -855,7 +844,7 @@
               </div>
               <div class="thumbnail small party">
                 <a href="images/demo/gallery/gallery6.jpg" class="swipebox">
-                  <img src="images/demo/gallery/gallery6.jpg" alt="">
+                  <img src="/images/demo/gallery/gallery6.jpg" alt="">
                   <div class="rollover">
                     <i class="plus"></i>
                   </div>
@@ -863,7 +852,7 @@
               </div>
               <div class="thumbnail small music">
                 <a href="images/demo/gallery/gallery7.jpg" class="swipebox">
-                  <img src="images/demo/gallery/gallery7.jpg" alt="">
+                  <img src="/images/demo/gallery/gallery7.jpg" alt="">
                   <div class="rollover">
                     <i class="plus"></i>
                   </div>
@@ -877,7 +866,7 @@
             <div id="more-items">
               <div class="thumbnail video">
                 <a href="images/demo/gallery/gallery2.jpg" class="swipebox">
-                  <img src="images/demo/gallery/gallery2.jpg" alt="">
+                  <img src="/images/demo/gallery/gallery2.jpg" alt="">
                   <div class="rollover">
                     <i class="plus"></i>
                   </div>
@@ -885,7 +874,7 @@
               </div>
               <div class="thumbnail concert">
                 <a href="images/demo/gallery/gallery1.jpg" class="swipebox">
-                  <img src="images/demo/gallery/gallery1.jpg" alt="">
+                  <img src="/images/demo/gallery/gallery1.jpg" alt="">
                   <div class="rollover">
                     <i class="plus"></i>
                   </div>
@@ -893,7 +882,7 @@
               </div>
               <div class="thumbnail small dj">
                 <a href="images/demo/gallery/gallery5.jpg" class="swipebox">
-                  <img src="images/demo/gallery/gallery5.jpg" alt="">
+                  <img src="/images/demo/gallery/gallery5.jpg" alt="">
                   <div class="rollover">
                     <i class="plus"></i>
                   </div>
@@ -901,7 +890,7 @@
               </div>
               <div class="thumbnail small events">
                 <a href="images/demo/gallery/gallery4.jpg" class="swipebox">
-                  <img src="images/demo/gallery/gallery4.jpg" alt="">
+                  <img src="/images/demo/gallery/gallery4.jpg" alt="">
                   <div class="rollover">
                     <i class="plus"></i>
                   </div>
@@ -996,6 +985,29 @@
     
 
     <script src="scripts/vendor/jquery.js"></script>
+    <script src="/scripts/vendor/pace.js"></script>
+    <script>
+      paceOptions = {
+        elements: {
+          selectors: [
+            '#vidPlayer',
+            '.vidplayer',
+            '#vidPlayer .vidplayer'
+          ]
+        }
+      }
+      function startit() {
+        document.getElementsByTagName('body')[0].classList.add('pace-running')
+      }
+      function endit() {
+        document.getElementsByTagName('body')[0].classList.remove('pace-running')
+        document.getElementsByTagName('body')[0].classList.add('pace-done')
+      }
+      
+      Pace.on('start', startit());
+      Pace.on('done', endit());
+      Pace.off(startit(), endit());
+    </script>
     <script src="scripts/vendor/jquery.superslides.min.js"></script>
     <script src="scripts/vendor/flickity.pkgd.js"></script>
     <script src="scripts/vendor/audio.min.js"></script>
@@ -1011,6 +1023,20 @@
     <script src="scripts/main.js"></script>
 
     <script src="scripts/vendor/bootstrap.js"></script>
-
+    <script>
+      const vidPlayer = document.querySelector('#vidPlayer');
+      // const eventLog = document.querySelector('.event-log-contents');
+      let vidSource = null;
+      
+      if (vidSource) {
+        document.location.reload();
+      } else {            
+        vidSource = document.createElement('source');
+        vidSource.setAttribute('src', '/vid/hp-bg.mp4');
+        vidSource.setAttribute('type', 'video/mp4');
+  
+        vidPlayer.appendChild(vidSource);
+      }
+    </script>
   </body>
 </html>

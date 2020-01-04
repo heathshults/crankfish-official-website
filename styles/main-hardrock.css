@@ -1383,8 +1383,8 @@ footer ul.menu-footer li a {
 .intro .text-overlay .coming-title {
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
-  -webkit-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
+  /* -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0); */
 }
 .loaded .intro .text-overlay .primary-title,
 .loaded .intro .text-overlay .subtitle-text,
@@ -2080,6 +2080,10 @@ input.btn.rounded {
 /*------------------------------------------------------------------
 [6.07. slider-intro]
 */
+.slides-container {
+  position: absolute;
+  top:0;
+}
 .slider-intro {
   height: 100%;
 }
@@ -8586,13 +8590,16 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
   height: 25px;
 }
 
-.pace-running .loading-overlay {
+.loading-overlay {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 101;
+  z-index: 1999;
+}
+.pace-running .loading-overlay {
+  
   width: 100%;
   height: 100vh;
   background: #000;
