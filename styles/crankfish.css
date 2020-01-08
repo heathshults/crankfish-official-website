@@ -896,7 +896,7 @@ p.quote-post {
   padding-left: 0;
 }
 .overlay {
-  background: transparent url("../images/overlay-01.png");
+  background: rgba(0,0,0,.35) url("../images/overlay-01.png");
   opacity: 0.5;
   width: 100%;
   height: 100%;
@@ -1335,7 +1335,7 @@ footer ul.menu-footer li a {
   text-shadow: 0px -1px 20px rgba(0, 0, 0, 0.5);
 }
 .intro {
-  background-color: #000000;
+  background-color: #111111;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1367,10 +1367,10 @@ footer ul.menu-footer li a {
   z-index: 4;
 }
 .intro .text-overlay .logo-intro {
-  /* -webkit-transition: -webkit-transform 0.35s;
+  -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0); */
+  -webkit-transform: translate3d(0, -19%, 0);
+  transform: translate3d(0, -19%, 0);
 }
 .loaded .intro .text-overlay .logo-intro {
   -webkit-transform: translate3d(0, 0, 0);
@@ -1978,30 +1978,37 @@ input.btn.rounded {
   padding-top: 11px;
 }
 .btn-default {
-  color: #000000;
-  background-color: transparent;
-  border-color: #000000;
+  color: #ffffff;
+  background-color: rgba(0,0,0,.25);
+  border-color: rgba(0,0,0,.35);
+  transition: all .35s ease-in-out;
+
 }
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active {
-  color: #000000;
-  background-color: transparent;
-  border-color: #000000;
+  color: #ffffff;
+  background-color: rgba(41, 0, 0, 0.35);
+  border-color: rgba(41, 0, 0, 0.45);
+  transition: all .35s ease-in-out;
+
 }
 .btn-invert {
   color: #ffffff;
-  background-color: transparent;
-  border-color: #ffffff;
+  background-color: rgba(255,255,255,.25);
+  border-color: rgba(255,255,255,.35);
+  transition: all .35s ease-in-out;
+
 }
 .btn-invert:hover,
 .btn-invert:focus,
 .btn-invert:active,
 .btn-invert.active {
   color: #ffffff;
-  background-color: #ca9e2a;
-  border-color: #ca9e2a;
+  background-color: rgba(202, 157, 42, 0.25);
+  border-color: rgba(202, 157, 42, 0.35);
+  transition: all .35s ease-in-out;
 }
 .close-btn {
   background-image: url('../images/close-ajax.png');
@@ -2138,6 +2145,7 @@ input.btn.rounded {
 */
 .player {
   position: relative;
+  z-index: 3;
 }
 .player.horizontal {
   background-color: #151518;
@@ -2152,25 +2160,28 @@ input.btn.rounded {
   }
 }
 .player.horizontal .container {
+
+  z-index: 3;
   background-color: #151518;
   margin: 0 auto;
   max-width: 1010px;
   height: 100%;
   position: relative;
   padding: 0;
+ 
 }
 @media (min-width: 768px) {
   .player.horizontal .container {
     padding-left: 15px;
     padding-right: 15px;
-    border-left: 1px solid #333;
-    border-right: 1px solid #333;
+    border-left: 1px solid #222;
+    border-right: 1px solid #222;
   }
 }
 .player.horizontal .info-album-player {
   display: inline-block;
   padding: 10px 10px 10px 3px;
-  border-right: 1px solid #333;
+  border-right: 1px solid #222;
   text-align: center;
   float: left;
 }
@@ -2898,7 +2909,7 @@ p.date span.month {
 .carousel-discography .gallery-cell .cover .rollover i {
   color: #ca9e2a;
   position: absolute;
-  background-color: #ffffff;
+  background-color: #151515;
   text-align: center;
   padding-top: 21px;
   border-radius: 50%;
@@ -3310,7 +3321,7 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
 .upcomming-events .upevent .separator span:before {
   content: "";
   height: 2px;
-  background-color: #ffffff;
+  background-color: #151515;
   width: 50px;
   display: block;
   margin: 0 auto;
@@ -3569,7 +3580,7 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
   background-color: rgba(255, 255, 255, 0.4);
 }
 .disc-tracklist .audiojs .progress {
-  background-color: #ffffff;
+  background-color: #333333;
 }
 .disc-tracklist .audiojs .time {
   position: absolute;
@@ -3714,7 +3725,7 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
 .tour-info p.separator:before {
   content: "";
   height: 2px;
-  background-color: #ffffff;
+  background-color: #333333;
   width: 25%;
   display: block;
   margin: 0 auto;
@@ -4180,7 +4191,7 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
   text-transform: none;
 }
 .ecommercebar .cart-big .list-cart-products li:hover {
-  background-color: #ffffff;
+  background-color: #333333;
 }
 .ecommercebar .cart-big .total {
   padding: 23px 25px 23px 20px;
@@ -4845,27 +4856,62 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
   }
 }
 
-#video-background {
-  position: fixed;
+.bg-vid-container {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+#bg-vid-background, .bg-vid-background {
+  position: absolute;
+  top: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index:2;
   }
 
-  .vid-overlay {
-  position: fixed;
-  right: 0;
-  bottom: 0;
+  .bg-vid-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background: rgba(0,0,0,.75);
+  }
+  .bgvid {
+    position: absolute;
+  top: 50%;
+  left: 50%;
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: 1;
-  background: rgba(0,0,0,.75);
+
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  }
+  @media (pointer: coarse) and (hover: none) {
+    .bg-vid-background  {
+      background: url('/images/header-bg-color-modify.jpg') black no-repeat center center scroll;
+    }
+    .bgvid {
+      display: none;
+    }
   }
   /*#overlay {
   position: absolute;
@@ -8607,6 +8653,7 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
   overflow: hidden;
   transition: all .35s ease-in-out;
 }
+.pace-done .pace-progress,
 .pace-done .loading-overlay {
   width: 0px;
   height: 0px;
@@ -8614,6 +8661,10 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
   overflow: hidden;
   opacity: 0;
   transition: all .35s ease-in-out;
+}
+.pace-done .pace.pace-inactive {
+  display: none;
+  opacity: 0;
 }
  .pace-running .loading-overlay > .loading-logo {
    display: inline-block;
@@ -8625,14 +8676,14 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
    transform: translate(-50%, -60%);
    transition: opacity .35s ease-in-out;
  }
- .pace-done .loading-overlay > .loading-logo  {
+ /* .pace-done .loading-overlay > .loading-logo  {
    opacity: 0;
    position: absolute;
    bottom: -300px;
    left: 50%;
    transform: translateX(-50%);
    transition: opacity .35s ease-in-out;
- }
+ } */
  .fixed-top {
    z-index: 90 !important;
  }
@@ -8644,7 +8695,8 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
 
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none;
+  -ms-user-select: none;
+      user-select: none;
 
   z-index: 2000;
   position: fixed;
@@ -8675,10 +8727,6 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
   border-style: double;
   border-color: #6c0000 transparent transparent;
   border-radius: 50%;
-
-  -webkit-animation: spin 1s linear infinite;
-  -moz-animation: spin 1s linear infinite;
-  -o-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
 }
 
@@ -8696,18 +8744,7 @@ ul.slider-twitter .flickity-page-dots .dot.is-selected {
   border-radius: 50%;
 }
 
-@-webkit-keyframes spin {
-  100% { -webkit-transform: rotate(359deg); }
-}
-
-@-moz-keyframes spin {
-  100% { -moz-transform: rotate(359deg); }
-}
-
-@-o-keyframes spin {
-  100% { -moz-transform: rotate(359deg); }
-}
-
 @keyframes spin {
   100% {  transform: rotate(359deg); }
 }
+

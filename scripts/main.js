@@ -1,10 +1,24 @@
 /* Loading */
 // $(window).load(function() {
-//   $(".loader").delay(500).fadeOut();
-//   $("#mask").delay(1000).fadeOut("slow");
-//   $("body").addClass("loaded");
+//   $("#bg-video-overlay").delay(500).fadeOut();
+//   $("#video-background").delay(1000).fadeOut("slow");
+//   $('body').removeClass('pace-running')
+//   $("body").addClass("pace-done");
 // });
-
+ 
+  
+function onYouTubePlayerReady(playerId) {
+  var ytplayer = getElementById("myytplayer");
+  ytplayer.addEventListener("onStateChange", "onytplayerStateChange");
+}
+// your callback function   
+function onytplayerStateChange(newState) {
+   if (newState === 0){
+        $('yourContainingDiv').hide();
+        // or if you want to just remove it...
+        $('yourContainingDiv').remove();
+   }
+}
 
 
 /*---------------------------------------------- 

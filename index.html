@@ -5,6 +5,28 @@
 <!--[if gt IE 8]><!--> 
   <html class="no-js"> <!--<![endif]-->
   <head>
+    <script src="scripts/vendor/jquery.js"></script>
+    <script src="/scripts/vendor/pace.js"></script>
+    <script>
+      //paceOptions = {
+        //elements: {
+          //selectors: 
+           // ['#vidPlayer, #vidSource']
+        //}
+     // }
+      // const bTag = $('body')
+      // function startit() {
+        // bTag.addClass('pace-running')
+      // }
+      // function endit() {
+        // bTag.removeClass('pace-running')
+        // bTag.addClass('pace-done')
+      // }
+      
+      // Pace.on('start', startit());
+      // Pace.on('done', endit());
+      // Pace.off(startit(), endit());
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crankfish Official Website</title>
@@ -27,7 +49,7 @@
     <link rel="stylesheet" href="/styles/vendor/swipebox.min.css">
     <link rel="stylesheet" href="/styles/vendor/TimeCircles.css">
 
-    <link rel="stylesheet" href="/styles/main-hardrock.css">
+    <link rel="stylesheet" href="/styles/crankfish.css">
     <link rel="stylesheet" href="/styles/demo.css">
 
     <link rel="stylesheet" href="/styles/colors/color-darkturquoise.css">
@@ -83,6 +105,8 @@
       </nav>
     </header>
     
+    
+    
     <!-- INTRO -->
     <section class="intro full-width jIntro" id="Home">
       <div class="container">
@@ -90,20 +114,18 @@
           <div class="col-md-12">
             <div class="slider-intro">
               <div id="slides">
-                <div class="bg-video-overlay"></div>
+                <div class="bg-vid-overlay"></div>
                   <div class="slides-container">
-                    <div id="video-background" class="">
-                      <video id="bg-vid" class="" autoplay="true" loop muted plays-inline>
-                        <!--  <source src="/vid/hp-bg.mp4" type="video/mp4">  -->
-                      </video>
-                    </div>
-                  <!--<img src="/images/header-bg-color-modify.jpg">
-                  <img src="/images/header-bg-color-modify.jpg">  -->
+                    
+                  <img src="/images/intro-slide2.jpg" style="opacity:1">
+                  <img src="/images/intro-slide3.jpg"> 
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
+        
 
         <div class="hero vcenter text-center text-overlay d-flex vh-100">
           <div class="logo-intro"><img src="/images/demo/logo-intro.png" class="logo-icon" alt="logo icon"></div>
@@ -132,8 +154,23 @@
         </div>
 
       </div>
+      <div id="bg-vid-container">
+        <div class="bg-vid-overlay"></div>
+        <div id="bg-vid-background" class="">
+          <video id="bgvid" class="" autoplay="true" muted plays-inline>
+            <source id="vidSource" class="vidSource" src="/vid/hp-bg.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
     </section>
-    
+        <script>
+          function hide(e){
+            e.currentTarget.style.visibility = 'hidden';
+          }
+          
+          let vidplayer = document.querySelector('#bgvid');
+          vidplayer.addEventListener('ended', hide, false);
+        </script>
     <!-- PLAYER -->
     <div class="player horizontal">
       <div class="container">
@@ -420,17 +457,24 @@
         </div>
         <div class="row">
           <div class="col-lg-6">
-            <img src="/images/demo/biography/biography.jpg" alt="">
+            <img src="/images/THATS-MIKE.jpg" alt="">
           </div>
           <div class="col-lg-6">
             <div class="voffset50"></div>
             <div class="quote">
-              <p>"If I can play one note and make you cry, then that's better than thouse fancy dancers playing twenty notes."</p>
-              <p class="author">Robbie Robertson</p>
+              <p>"We aren't like the rest. We've never the description. We never wanted to. 
+                And we really don't care! This isn't about fitting in or being accepted. 
+                This is about our lives, our friends and our family."</p>
+              <p class="author">Heath Shults</p>
             </div>
             <div class="description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam iure blanditiis velit, suscipit quidem fuga, magni repudiandae atque placeat sint corporis commodi praesentium dolore necessitatibus minima nemo ipsam, perspiciatis libero, quos. Obcaecati consectetur vel nostrum praesentiu.</p>
-              <p>Obcaecati consectetur vel nostrum praesentium dolore necessitatibus minima nemo ipsam, perspiciatis libero, quos, odio quaerat asperiores repudiandae atque placeat sint corporis commodi onsectetur adipisicing elit.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam iure 
+                blanditiis velit, suscipit quidem fuga, magni repudiandae atque placeat 
+                sint corporis commodi praesentium dolore necessitatibus minima nemo ipsam, 
+                perspiciatis libero, quos. Obcaecati consectetur vel nostrum praesentiu.</p>
+              <p>Obcaecati consectetur vel nostrum praesentium dolore necessitatibus minima 
+                nemo ipsam, perspiciatis libero, quos, odio quaerat asperiores repudiandae 
+                atque placeat sint corporis commodi onsectetur adipisicing elit.</p>
             </div>
           </div>
         </div>
@@ -984,30 +1028,7 @@
 
     
 
-    <script src="scripts/vendor/jquery.js"></script>
-    <script src="/scripts/vendor/pace.js"></script>
-    <script>
-      paceOptions = {
-        elements: {
-          selectors: [
-            '#vidPlayer',
-            '.vidplayer',
-            '#vidPlayer .vidplayer'
-          ]
-        }
-      }
-      function startit() {
-        document.getElementsByTagName('body')[0].classList.add('pace-running')
-      }
-      function endit() {
-        document.getElementsByTagName('body')[0].classList.remove('pace-running')
-        document.getElementsByTagName('body')[0].classList.add('pace-done')
-      }
-      
-      Pace.on('start', startit());
-      Pace.on('done', endit());
-      Pace.off(startit(), endit());
-    </script>
+    
     <script src="scripts/vendor/jquery.superslides.min.js"></script>
     <script src="scripts/vendor/flickity.pkgd.js"></script>
     <script src="scripts/vendor/audio.min.js"></script>
@@ -1024,19 +1045,18 @@
 
     <script src="scripts/vendor/bootstrap.js"></script>
     <script>
-      const vidPlayer = document.querySelector('#vidPlayer');
+      // const vidPlayer = document.querySelector('#vidPlayer');
       // const eventLog = document.querySelector('.event-log-contents');
-      let vidSource = null;
       
-      if (vidSource) {
-        document.location.reload();
-      } else {            
-        vidSource = document.createElement('source');
-        vidSource.setAttribute('src', '/vid/hp-bg.mp4');
-        vidSource.setAttribute('type', 'video/mp4');
+      
+      // if (vidSource) {
+        //document.location.reload();
+      // } else {            
+        // let vidSource = document.createElement('source');
+        // vidSource.setAttribute('src', '/vid/hp-bg.mp4');
+        // vidSource.setAttribute('type', 'video/mp4');
   
-        vidPlayer.appendChild(vidSource);
-      }
+      // }
     </script>
   </body>
 </html>

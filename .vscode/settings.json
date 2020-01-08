@@ -1,0 +1,10 @@
+{
+  "liveServer.settings.ChromeDebuggingAttachment": true,
+  "liveServer.settings.useWebExt": true,
+  "liveServer.settings.https": {
+    "enable": true,
+    "cert": "musicman1CA.pem",
+    "key": "musicman1CA.key",
+    "passphrase": "HK3134Ever"
+  }
+}
