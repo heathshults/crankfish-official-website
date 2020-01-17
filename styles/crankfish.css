@@ -190,6 +190,7 @@ section {
 }
 body {
   line-height: 1;
+  background: #151515;
 }
 ol,
 ul {
@@ -1321,9 +1322,11 @@ footer ul.menu-footer li a {
 */
 .font-Bahianita {
   font-family: Bahianita, cursive;
+  text-shadow: 0px -1px 18px rgba(0, 0, 0, 0.59);
 }
 .font-new-rocker {
   font-family: 'New Rocker', cursive;
+  text-shadow: 0px -1px 18px rgba(0, 0, 0, 0.59);
 }
 .font-dreamwalker {
   font-family: Dreamwalker, Roboto;
@@ -1449,17 +1452,25 @@ footer ul.menu-footer li a {
 .primary-title {
   line-height: normal;
   font-family: Bahianita, cursive;
+  text-shadow: 0px -1px 18px rgba(0, 0, 0, 0.59);
+  /* font-family: Dreamwalker, 'HighVoltage Rough', 'White On', Bahianita, cursive; */
+  /* font-family: Bahianita, cursive; */
   font-size: 124px;
   color: rgba(255, 255, 255, 0.35);
   text-transform: uppercase;
-  span.subtitle-text {
+  
+}
+
+.primary-title span.subtitle-text {
     
-  }
 }
 @media (min-width: 992px) {
   .primary-title {
     line-height: normal;
     font-family: Bahianita, cursive;
+    text-shadow: 0px -1px 18px rgba(0, 0, 0, 0.59);
+    /* font-family: Dreamwalker, 'HighVoltage Rough', 'White On', Bahianita, cursive; */
+    /* font-family: Bahianita, cursive; */
     font-size: 148px;
     color: rgba(255, 255, 255, 0.45);
     text-transform: uppercase;
@@ -1483,7 +1494,7 @@ footer ul.menu-footer li a {
 
 .primary-title > span.subtitle-text {
   font-size: 50%;
-  font-family: Dreamwalker, Roboto;
+  font-family: Bahianita, cursive;
 
 }
 
@@ -2143,8 +2154,19 @@ input.btn.rounded {
 /*------------------------------------------------------------------
 [6.08. player]
 */
+.player-wrapper {
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:3;
+box-shadow: -1px 0px 24px 9px rgba(0,0,0,0.66);
+}
 .player {
   position: relative;
+  /* bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); */
   z-index: 3;
 }
 .player.horizontal {

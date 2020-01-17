@@ -105,6 +105,45 @@
       </nav>
     </header>
     
+    <!-- player -->
+    <style>
+      .player.horizontal .container {
+        border-left-color:  #222;
+        border-right-color: #222;
+      }
+      .player.horizontal .info-album-player {
+        border-right-color: #222;
+      }
+    </style>
+    <div class="player-wrapper">
+      <div class="player horizontal">
+        <div class="container">
+          <div class="info-album-player">
+            <div class="album-cover" id="bg-image3"></div>
+            <p class="album-title">Represent</p>
+            <p class="artist-name">Album by Crankfish</p>
+          </div>
+          <div class="player-content">
+            <audio preload></audio>
+            <ol class="playlist">
+              <li><a href="#" data-src="mp3/Red_Swallow.mp3">Red Swallow</a></li>
+              <li><a href="#" data-src="mp3/Represent.mp3">Represent</a></li>
+              <li><a href="#" data-src="mp3/Roland.mp3">A Walk with Roland</a></li>
+              <li><a href="#" data-src="mp3/King_Pin.mp3">King Pin</a></li>
+              <li><a href="#" data-src="mp3/Syllable.mp3">Syllable</a></li>
+            </ol>
+            <div class="nextprev">
+              <span class="prev">prev</span>
+              <span class="next">next</span>
+            </div>
+            <span class="btnloop">loop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- /player -->
+    
     
     
     <!-- INTRO -->
@@ -171,32 +210,7 @@
           let vidplayer = document.querySelector('#bgvid');
           vidplayer.addEventListener('ended', hide, false);
         </script>
-    <!-- PLAYER -->
-    <div class="player horizontal">
-      <div class="container">
-        <div class="info-album-player">
-          <div class="album-cover" id="bg-image3"></div>
-          <p class="album-title">Represent</p>
-          <p class="artist-name">Album by Crankfish</p>
-        </div>
-        <div class="player-content">
-          <audio preload></audio>
-          <ol class="playlist">
-            <li><a href="#" data-src="mp3/Red_Swallow.mp3">Red Swallow</a></li>
-            <li><a href="#" data-src="mp3/Represent.mp3">Represent</a></li>
-            <li><a href="#" data-src="mp3/Roland.mp3">A Walk with Roland</a></li>
-            <li><a href="#" data-src="mp3/King_Pin.mp3">King Pin</a></li>
-            <li><a href="#" data-src="mp3/Syllable.mp3">Syllable</a></li>
-          </ol>
-          <div class="nextprev">
-            <span class="prev">prev</span>
-            <span class="next">next</span>
-          </div>
-          <span class="btnloop">loop</span>
-        </div>
-      </div>
-    </div>
-
+    
     <!-- NEWS -->
     <div class="section blog inverse-color pattern list-posts" id="News">
       <div class="container">
@@ -501,17 +515,17 @@
           <div class="col-md-12">
             <ul class="carousel-discography js-flickity" data-flickity-options="{ &quot;cellAlign&quot;: &quot;left&quot;, &quot;wrapAround&quot;: true, &quot;contain&quot;: true, &quot;prevNextButtons&quot;: false }">
               <!-- col-xlg-3 -->
-              <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
+              <li class="gallery-cell col-xs-12 col-sm-6 col-md-4"> 
                 <div class="info-album">
-                  <div class="cover open-disc" data-url="discs/disc-01.html">
-                    <img src="images/demo/discography/disco-1.jpg" alt="">
+                  <div class="cover open-disc" data-url="discs/disc-03.html">
+                    <img src="images/demo/discography/disco-3.jpg" alt="">
                     <div class="rollover">
                       <i class="fa fa-cart-plus"></i>
                       <p>view album</p>
                     </div>
                   </div>
-                  <p class="album">Gifts of Habit</p>
-                  <p class="artist">2002</p>
+                  <p class="album">Reborn</p>
+                  <p class="artist">2019</p>
                 </div>
               </li>
               <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
@@ -527,17 +541,18 @@
                   <p class="artist">2003</p>
                 </div>
               </li>
-              <li class="gallery-cell col-xs-12 col-sm-6 col-md-4"> 
+              
+              <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
                 <div class="info-album">
-                  <div class="cover open-disc" data-url="discs/disc-03.html">
-                    <img src="images/demo/discography/disco-3.jpg" alt="">
+                  <div class="cover open-disc" data-url="discs/disc-01.html">
+                    <img src="images/demo/discography/disco-1.jpg" alt="">
                     <div class="rollover">
                       <i class="fa fa-cart-plus"></i>
                       <p>view album</p>
                     </div>
                   </div>
-                  <p class="album">Reborn</p>
-                  <p class="artist">2019</p>
+                  <p class="album">Gifts of Habit</p>
+                  <p class="artist">2002</p>
                 </div>
               </li>
               <li class="gallery-cell col-xs-12 col-sm-6 col-md-4">
